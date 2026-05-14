@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "HickernellClassLib"
+version = "0.2.0"
+description = "Shared teaching utilities for Hickernell courses (MATH 565, MATH 476, etc.)"
+authors = [
+    { name = "Fred J. Hickernell" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy >= 1.23",
+    "matplotlib >= 3.8"
+]
+
+[project.urls]
+Repository = "https://github.com/YourOrgOrUser/HickernellClassLib"

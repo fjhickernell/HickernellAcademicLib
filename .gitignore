@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.DS_Store
+*.pyo
+*.pyd
+
+*ipynb_checkpoints
+*.jupyter*
+**/.virtual_documents/
+
+# C extensions
+*.so
+
+
+.sass-cache/
+*.css.map
+classlib/notebooks/_figures/
+classlib/notebooks/figures/
+classlib/notebooks/.ipynb_checkpoints/
+
+# Quarto scratch notebooks
+*.quarto_ipynb

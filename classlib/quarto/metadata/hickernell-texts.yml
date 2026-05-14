@@ -1,0 +1,19 @@
+texts:
+  cb:
+    initials: "CB"
+    short: "Casella &amp; Berger"
+    full: "G. Casella &amp; R. L. Berger, *Statistical Inference*, 2nd ed. (2002)"
+    url: "https://www.routledge.com/Statistical-Inference/Casella-Berger/p/book/9781032593036"
+
+  wms:
+    initials: "WMS"
+    short: "Wackerly et al."
+    full: "D. S. Wackerly, W. Mendenhall III, &amp; R. L. Scheaffer, *Mathematical Statistics with Applications*, 7th ed (2008)"
+    url: "https://www.cengage.com/c/mathematical-statistics-with-applications-7e-wackerly-mendenhall-scheaffer/9780495110811/"
+
+references:
+  eh:
+    initials: "EH"
+    short: "Efron &amp; Hastie"
+    full: "B. Efron &amp; T. Hastie, *Computer Age Statistical Inference* (2016)"
+    url: "https://hastie.su.domains/CASI/"
