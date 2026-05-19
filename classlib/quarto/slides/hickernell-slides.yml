@@ -30,7 +30,7 @@ format:
     footer: |
       <div class="fh-footer">
         <span class="fh-footer-main">
-          © 2026 Fred J. Hickernell · Illinois Tech
+          © 2026 Fred J. Hickernell · Illinois Tech · assisted by ChatGPT
           <span class="fh-footer-sep">·</span>
           <span class="fh-footer-deck">
             {{< meta deck_short_title >}}

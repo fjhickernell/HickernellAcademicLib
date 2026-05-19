@@ -3,13 +3,48 @@ import yaml
 from pathlib import Path
 
 
-def render_qmc_software_table(data_path, mode="web"):
+def render_link(label, url=""):
+    label = html.escape(str(label))
+    url = html.escape(str(url or ""))
+
+    if url:
+        return f'<a href="{url}">{label}</a>'
+    return label
+
+
+def render_name(row):
+    name_field = row.get("name", "")
+    url = row.get("url", "")
+
+    if isinstance(name_field, list):
+        parts = []
+        for item in name_field:
+            label = item.get("label", item.get("name", ""))
+            item_url = item.get("url", "")
+            parts.append(render_link(label, item_url))
+        return " / ".join(parts)
+
+    return render_link(name_field, url)
+
+
+def sort_key(row):
+    name_field = row.get("name", "")
+
+    if isinstance(name_field, list) and name_field:
+        first = name_field[0].get("label", name_field[0].get("name", ""))
+        return str(first).lower()
+
+    return str(name_field or "").lower()
+
+
+def render_qmc_software_table(data_path, mode="web", start=0, stop=None):
     data_path = Path(data_path)
 
     with data_path.open() as f:
         data = yaml.safe_load(f)
 
-    data = sorted(data, key=lambda x: (x.get("name") or "").lower())
+    data = sorted(data, key=sort_key)
+    data = data[start:stop]
 
     show_description = mode == "web"
     show_contact = mode == "web"
@@ -33,11 +68,11 @@ def render_qmc_software_table(data_path, mode="web"):
 """)
 
     for row in data:
-        name = html.escape(row.get("name", ""))
-        url = row.get("url", "")
+        name_html = render_name(row)
+
         language = html.escape(row.get("language", ""))
-        status = row.get("status", "")
-        raw_status = row.get("status", "")
+        raw_status = html.escape(row.get("status", ""))
+        desc = html.escape(row.get("description", ""))
 
         if mode == "web":
             status = raw_status.replace(
@@ -46,12 +81,6 @@ def render_qmc_software_table(data_path, mode="web"):
             )
         else:
             status = raw_status
-        desc = html.escape(row.get("description", ""))
-
-        if url:
-            name_html = f'<a href="{html.escape(url)}">{name}</a>'
-        else:
-            name_html = name
 
         related = row.get("related", [])
 
@@ -59,15 +88,9 @@ def render_qmc_software_table(data_path, mode="web"):
             related_links = []
 
             for r in related:
-                rname = html.escape(r.get("name", ""))
+                rname = r.get("name", "")
                 rurl = r.get("url", "")
-
-                if rurl:
-                    related_links.append(
-                        f'<a href="{html.escape(rurl)}">{rname}</a>'
-                    )
-                else:
-                    related_links.append(rname)
+                related_links.append(render_link(rname, rurl))
 
             related_html = ", ".join(related_links)
 
@@ -85,9 +108,7 @@ def render_qmc_software_table(data_path, mode="web"):
                 )
 
         if show_description and desc:
-            name_html += (
-                f'<br><span class="software-desc">{desc}</span>'
-            )
+            name_html += f'<br><span class="software-desc">{desc}</span>'
 
         row_html = f"""
 <tr>
@@ -102,27 +123,20 @@ def render_qmc_software_table(data_path, mode="web"):
 
             for c in contacts:
                 if isinstance(c, dict):
-                    cname = html.escape(c.get("name", ""))
+                    cname = c.get("name", "")
                     curl = c.get("url", "")
 
-                    if curl:
-                        label = (
-                            f"✉ {cname}"
-                            if curl.startswith("mailto:")
-                            else cname
-                        )
-
-                        contact_items.append(
-                            f'<a href="{html.escape(curl)}">{label}</a>'
-                        )
+                    if curl and str(curl).startswith("mailto:"):
+                        label = f"✉ {cname}"
                     else:
-                        contact_items.append(cname)
+                        label = cname
+
+                    contact_items.append(render_link(label, curl))
 
                 else:
                     contact_items.append(html.escape(str(c)))
 
             contact_str = "<br>".join(contact_items)
-
             row_html += f"  <td>{contact_str}</td>\n"
 
         row_html += "</tr>"

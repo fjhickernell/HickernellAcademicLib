@@ -40,9 +40,14 @@ format:
 
     slide-number: c/t
     show-slide-number: all
+
+    footer: |
+      Fred J. Hickernell · Illinois Institute of Technology · assisted by ChatGPT
+
     width: 1600
     height: 1000
     margin: 0.00
     center: false
     slide-level: 2
+
 
