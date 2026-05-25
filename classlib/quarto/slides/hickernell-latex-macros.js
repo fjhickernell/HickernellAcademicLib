@@ -54,6 +54,7 @@
         mathlink: ["\\href{#1}{\\text{\\color{##0f8b8d}{#2}}}", 2],
         frag: ["{\\class{fragment}{#2}}", 2],
         alert: ["{\\class{alert}{#1}}", 1],
+        alerttext: ["{\\class{alert}{\\text{#1}}}", 1],
         notimplies: "\\ \\mathrel{\\not\\!\\!\\!\\Longrightarrow}",
         convas: ["\\xrightarrow{\\mathsf{a.s.}}", 0],
         convp:  ["\\xrightarrow{\\Prob}", 0],
