@@ -1,0 +1,214 @@
+.tree-col {
+  container-type: inline-size;
+}
+
+.tree-slide {
+  position: relative;
+  width: var(--tree-width, 100%);
+  font-size: calc(var(--tree-font-scale, 1) * 2.5cqw);
+}
+
+.tree-slide .tree-img {
+  width: 100%;
+  display: block;
+}
+
+.tree-slide .tree-label {
+  position: absolute;
+  font-weight: 700;
+  color: #0c2b14;
+  line-height: 1;
+  text-shadow:
+    0 0 8px white,
+    0 0 16px white,
+    0 0 28px white;
+}
+
+.tree-slide .foundation {
+  left: 39%;
+  top: 78%;
+  font-size: 3em;
+}
+
+.tree-slide .theory {
+  left: 40%;
+  top: 50%;
+  font-size: 3em;
+}
+
+.tree-slide .practice {
+  left: 30%;
+  top: 19%;
+  font-size: 3em;
+}
+
+.tree-example-label {
+  position: absolute;
+  color: var(--header-blue);
+  font-weight: 700;
+  text-shadow:
+    0 0 6px rgba(255,255,255,1),
+    0 0 12px rgba(255,255,255,0.95),
+    0 0 18px rgba(255,255,255,0.85);
+  font-size: 1.5em;
+  line-height: 1;
+}
+
+.algebra {
+  left: 8%;
+  top: 79%;
+}
+
+.analysis {
+  left: 22%;
+  top:87%;
+}
+
+.cs {
+  left: 42%;
+  top: 90%;
+  text-align: center;
+}
+
+.domain {
+  left: 65%;
+  top: 89%;
+  text-align: center;
+}
+
+
+.statistics {
+  left: 78%;
+  top: 79%;
+}
+
+.tree-only-root {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 70%;
+  background:  var(--r-background-color, white);
+}
+
+.tree-mask-canopy {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 70%;
+  background: var(--slide-background, white);
+  z-index: 20;
+  pointer-events: none;
+
+  -webkit-mask:
+    radial-gradient(
+      ellipse 44% 50% at 47% 77%,
+      transparent 0 70%,
+      black 71%
+    );
+  mask:
+    radial-gradient(
+      ellipse 44% 50% at 47% 77%,
+      transparent 0 70%,
+      black 71%
+    );
+}
+
+.sequence {
+  left: 22%;
+  top: 70%;
+  text-align: center;
+}
+
+.discrepancy {
+  left: 25%;
+  top: 62%;
+}
+
+.error {
+  left: 43%;
+  top: 60%;
+  text-align: center;
+}
+
+.ibc {
+  left: 45%;
+  top: 70%;
+  text-align: center;
+}
+
+.prob {
+  left: 55%;
+  top: 60%;
+  text-align: center;
+}
+
+.multi {
+  left:45%;
+  top: 36%;
+}
+
+.change-measure {
+  left: 25%;
+  top: 38%;
+  text-align: center;
+}
+
+.dimension {
+  left: 40%;
+  top: 42%;
+}
+
+.random {
+  left: 55%;
+  top: 45%;
+  text-align: center;
+}
+
+.uq {
+  left: 8%;
+  top: 20%;
+  text-align: center;
+}
+
+.qf {
+  left: 5%;
+  top: 35%;
+  text-align: center;
+}
+
+.cg {
+  left: 25%;
+  top: 5%;
+  text-align: center;
+}
+
+.software {
+  left: 55%;
+  top: 25%;
+  text-align: center;
+}
+
+.community {
+  left: 45%;
+  top: 9%;
+  text-align: center;
+}
+
+.data-driven {
+  left: 75%;
+  top: 25%;
+  text-align: center;
+}
+
+.missing {
+  left: 70%;
+  top: 7%;
+  text-align: center;
+}
+
+.hpc {
+  left: 70%;
+  top: 40%;
+  text-align: center;
+}
+
