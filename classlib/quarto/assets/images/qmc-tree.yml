@@ -1,0 +1,56 @@
+image: "../assets/img/qmc-tree.png"
+
+groups:
+  foundation:
+    label: "Foundation"
+    labels:
+      - algebra
+      - analysis
+      - cs
+      - domain
+      - statistics
+
+  theory:
+    label: "Theory"
+    labels:
+      - sequence
+      - error
+      - discrepancy
+      - change-measure
+      - ibc
+      - multi
+      - dimension
+      - prob
+
+  practice:
+    label: "Practice"
+    labels:
+      - uq
+      - qf
+      - software
+      - community
+      - cg
+      - data-driven
+
+labels:
+  algebra: "Algebra"
+  analysis: "Analysis"
+  cs: "Computer<br>Science"
+  domain: "Domain<br>Knowledge"
+  statistics: "Statistics"
+
+  sequence: "Sequence<br>Construction"
+  error: "Error<br>Bounds"
+  discrepancy: "Discrepancy"
+  change-measure: "Variation<br>Reduction"
+  ibc: "Information-Based<br>Complexity"
+  multi: "Multilevel"
+  dimension: "Effective<br>Dimension"
+  prob: "Probabilistic<br>Numerics"
+
+  uq: "Uncertainty<br>Quantification"
+  qf: "Quantitative<br>Finance"
+  software: "Software"
+  community: "Collaboration<br>& Community"
+  cg: "Computer<br>Graphics"
+  data-driven: "Data-Driven<br>Error Bounds"
