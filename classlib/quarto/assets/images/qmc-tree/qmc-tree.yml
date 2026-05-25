@@ -32,6 +32,9 @@ groups:
       - community
       - cg
       - data-driven
+      - hpc
+      - ai
+      - missing
 
 labels:
   algebra: "Algebra"
@@ -56,4 +59,7 @@ labels:
   community: "Collaboration<br>& Community"
   cg: "Computer<br>Graphics"
   data-driven: "Data-Driven<br>Error Bounds"
+  hpc: "High-Performance<br>Computing"
+  ai: "AI-Assisted<br>Discovery"
+  missing: "Missing<br>Data"
   
