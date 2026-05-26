@@ -35,6 +35,7 @@ groups:
       - hpc
       - ai
       - missing
+      - infer
 
 labels:
   algebra: "Algebra"
@@ -62,4 +63,5 @@ labels:
   hpc: "High-Performance<br>Computing"
   ai: "AI-Assisted<br>Discovery"
   missing: "Missing<br>Data"
+  infer: "Statistical<br>Inference"
   

@@ -126,3 +126,20 @@ papers:
     tags: [qmc, digital-nets, discrepancy]
     publisher_url: "https://www.cambridge.org/core/books/digital-nets-and-sequences/9780521154566"
 
+  fangmawin_2002_centered_l2:
+    cite: "FMW02"
+    short: "Fang, Ma, Winker (2002)"
+    full: "K.-T. Fang, C.-X. Ma, & P. Winker, Centered L2-discrepancy of random sampling and Latin hypercube design, and construction of uniform designs, Math. Comp. 71, 275–296 (2002)."
+    type: article
+    tags: [qmc, discrepancy, optimization, uniform-design]
+    publisher_url: "https://researchconnect.suny.edu/en/publications/centered-lsub2sub-discrepancy-of-random-sampling-and-latin-hyperc/"
+
+  ruskirbrolemrus_2024_mpmc:
+    cite: "RKBLR24"
+    short: "Rusch, Kirk, Bronstein, Lemieux, Rus (2024)"
+    full: "T. K. Rusch, N. Kirk, M. M. Bronstein, C. Lemieux, & D. Rus, Message-Passing Monte Carlo: Generating low-discrepancy point sets via graph neural networks, Proc. Natl. Acad. Sci. USA 121(40), e2409913121 (2024)."
+    type: article
+    tags: [qmc, discrepancy, neural-networks, graph-neural-networks]
+    doi: "10.1073/pnas.2409913121"
+    doi_url: "https://doi.org/10.1073/pnas.2409913121"
+    arxiv_url: "https://arxiv.org/abs/2405.15059"
