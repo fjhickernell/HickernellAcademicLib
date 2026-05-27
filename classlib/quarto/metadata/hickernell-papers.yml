@@ -110,10 +110,10 @@ papers:
 
   cookuonuy_2006_constructing_embedded:
     cite: "CKN06"
-    short: "Cools, Kuo, Nuyens (2006)"
-    full: "R. Cools, F. Y. Kuo, & D. Nuyens, Constructing embedded lattice rules for multivariate integration, _SIAM J. Sci. Comput._, 28, 2162-2188 (2006)."
+    short: "Cools, Kuo, & Nuyens (2006)"
+    full: "R. Cools, F. Y. Kuo, & D. Nuyens, Constructing embedded lattice rules for multivariate integration, SIAM J. Sci. Comput. 28, 2162--2188 (2006)."
     type: article
-    tags: [qmc, lattice-rules, cbc]
+    tags: [qmc, lattice-rules, embedded-lattice-rules, cbc]
     doi: "10.1137/06065074X"
     doi_url: "https://doi.org/10.1137/06065074X"
     publisher_url: "https://epubs.siam.org/doi/10.1137/06065074X"
@@ -132,7 +132,7 @@ papers:
     full: "K.-T. Fang, C.-X. Ma, & P. Winker, Centered L2-discrepancy of random sampling and Latin hypercube design, and construction of uniform designs, Math. Comp. 71, 275–296 (2002)."
     type: article
     tags: [qmc, discrepancy, optimization, uniform-design]
-    publisher_url: "https://researchconnect.suny.edu/en/publications/centered-lsub2sub-discrepancy-of-random-sampling-and-latin-hyperc/"
+    publisher_url: "https://pubs.ams.org/MCOM/2002-71-237/S0025-5718-00-01281-3/"
 
   ruskirbrolemrus_2024_mpmc:
     cite: "RKBLR24"
@@ -143,3 +143,12 @@ papers:
     doi: "10.1073/pnas.2409913121"
     doi_url: "https://doi.org/10.1073/pnas.2409913121"
     arxiv_url: "https://arxiv.org/abs/2405.15059"
+
+  nuyenscools_2006_fastcbc:
+    cite: "NC06"
+    short: "Nuyens & Cools (2006)"
+    full: "D. Nuyens & R. Cools, Fast component-by-component construction of rank-1 lattice rules with a non-prime number of points, J. Complexity 22(1), 4--28 (2006)."
+    type: article
+    tags: [qmc, lattice-rules, cbc, fast-cbc, weighted-spaces]
+    doi: "10.1016/j.jco.2005.09.002"
+    doi_url: "https://doi.org/10.1016/j.jco.2005.09.002"
