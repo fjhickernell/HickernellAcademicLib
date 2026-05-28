@@ -36,7 +36,7 @@ papers:
   hickirsor_2026_qmc_tutorial:
     cite: "HKS26"
     short: "Hickernell, Kirk, Sorokin (2026)"
-    full: "F. J. Hickernell, N. Kirk, & A. G. Sorokin, Quasi-Monte Carlo Methods: What, Why, and How?, in Monte Carlo and Quasi-Monte Carlo Methods: MCQMC, Waterloo, Canada, August 2024, (eds. C. Lemieux and B. Feng), 2026, to appear."
+    full: "F. J. Hickernell, N. Kirk, & A. G. Sorokin, Quasi-Monte Carlo Methods: What, Why, and How?, in Monte Carlo and Quasi-Monte Carlo Methods: MCQMC, Waterloo, Canada, August 2024, (eds. C. Lemieux and B. Feng), pp. 3–40, 2026."
     type: inproceedings
     tags: [qmc, tutorial]
     doi: "10.48550/arXiv.2502.03644"
@@ -111,7 +111,7 @@ papers:
   cookuonuy_2006_constructing_embedded:
     cite: "CKN06"
     short: "Cools, Kuo, & Nuyens (2006)"
-    full: "R. Cools, F. Y. Kuo, & D. Nuyens, Constructing embedded lattice rules for multivariate integration, SIAM J. Sci. Comput. 28, 2162--2188 (2006)."
+    full: "R. Cools, F. Y. Kuo, & D. Nuyens, Constructing embedded lattice rules for multivariate integration, SIAM J. Sci. Comput. 28, 2162–2188 (2006)."
     type: article
     tags: [qmc, lattice-rules, embedded-lattice-rules, cbc]
     doi: "10.1137/06065074X"
@@ -147,7 +147,7 @@ papers:
   nuyenscools_2006_fastcbc:
     cite: "NC06"
     short: "Nuyens & Cools (2006)"
-    full: "D. Nuyens & R. Cools, Fast component-by-component construction of rank-1 lattice rules with a non-prime number of points, J. Complexity 22(1), 4--28 (2006)."
+    full: "D. Nuyens & R. Cools, Fast component-by-component construction of rank-1 lattice rules with a non-prime number of points, J. Complexity 22(1), 4–28 (2006)."
     type: article
     tags: [qmc, lattice-rules, cbc, fast-cbc, weighted-spaces]
     doi: "10.1016/j.jco.2005.09.002"
