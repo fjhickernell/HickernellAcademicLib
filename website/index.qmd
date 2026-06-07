@@ -1,0 +1,37 @@
+---
+title: "Fred J. Hickernell"
+---
+
+Professor of Applied Mathematics  
+Illinois Institute of Technology
+
+## Featured Resources
+
+- [MCQMC 2026 Plenary Slides](talks.qmd)
+- [QMCPy and QMCSoftware](software.qmd)
+- [Courses](courses.qmd)
+- [Publications](papers.qmd)
+
+## Research Interests
+
+- Monte Carlo Methods
+- Quasi-Monte Carlo Methods
+- Uncertainty Quantification
+- High-Dimensional Approximation
+- Information-Based Complexity
+
+
+## Navigation
+
+- [Talks](talks.qmd)
+- [Courses](courses.qmd)
+- [Software](software.qmd)
+- [Papers](papers.qmd)
+
+
+
+
+- [Talks](talks.qmd)
+- [Courses](courses.qmd)
+- [Software](software.qmd)
+- [Papers](papers.qmd)

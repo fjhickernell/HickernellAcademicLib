@@ -21,3 +21,11 @@ classlib/notebooks/.ipynb_checkpoints/
 
 # Quarto scratch notebooks
 *.quarto_ipynb
+
+/.quarto/
+**/*.quarto_ipynb
+
+# Quarto website build artifacts
+website/_site/
+website/*_files/
+website/.quarto/

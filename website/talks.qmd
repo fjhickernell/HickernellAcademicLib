@@ -1,0 +1,10 @@
+---
+title: "Talks"
+---
+
+## Recent Talks
+
+| Talk | Slides |
+|------|---------|
+| MCQMC 2026 Plenary | Coming soon |
+| SIAM UQ 2026 | Coming soon |

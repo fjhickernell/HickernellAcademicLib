@@ -1,0 +1,29 @@
+project:
+  type: website
+  output-dir: _site
+
+metadata-files:
+  - ../classlib/quarto/website/hickernell-website.yml
+
+website:
+  title: "Fred J. Hickernell"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: talks.qmd
+        text: Talks
+      - href: courses.qmd
+        text: Courses
+      - href: software.qmd
+        text: Software
+      - href: papers.qmd
+        text: Papers
+
+format:
+  html:
+    css:
+      - ../classlib/quarto/website/hickernell-website.css
+    toc: true
+    toc-depth: 3
+
