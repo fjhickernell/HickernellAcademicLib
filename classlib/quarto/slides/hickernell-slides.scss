@@ -1027,6 +1027,11 @@ h1::before,
   font-weight: 500;
 }
 
+.main-message {
+  background: rgba(0, 102, 204, 0.08);
+  border-left: 10px solid var(--accent-blue);
+  padding: 0.5em 1em;
+}
 
 .indent {
   margin-left: 2em;

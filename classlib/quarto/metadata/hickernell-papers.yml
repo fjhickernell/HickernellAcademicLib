@@ -14,10 +14,10 @@
 #     tags:        list of keywords (e.g., [qmc, sobol, discrepancy])
 #
 #     doi:         "10.1214/aos/..."
-#     doi_url:     https://doi.org/...
+#     doi_url:     "https://doi.org/..."
 #
 #     arxiv:       "arXiv:1234.56789"
-#     arxiv_url:   https://arxiv.org/abs/...
+#     arxiv_url:   "https://arxiv.org/abs/..."
 #
 #     publisher_url: journal landing page (optional)
 #     project_url:   for software (optional)
@@ -152,3 +152,12 @@ papers:
     tags: [qmc, lattice-rules, cbc, fast-cbc, weighted-spaces]
     doi: "10.1016/j.jco.2005.09.002"
     doi_url: "https://doi.org/10.1016/j.jco.2005.09.002"
+
+  matiukhadinghickernell_2026_quality_lattices:
+    cite: "MDH26+"
+    short: "Matiukha, Ding, Hickernell (2026)"
+    full: "Matiukha, Ding, Hickernell, The Quality of Lattice Sequences for Arbitrary Sample SizeQuality of Lattice Rules for Non-Periodic Integrands, preprint (2026)."
+    type: preprint
+    tags: [qmc, lattice-rules, sequences]
+    arxiv: Null
+    arxiv_url: Null
