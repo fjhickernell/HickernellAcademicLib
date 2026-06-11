@@ -60,7 +60,7 @@ papers:
 
   dicgodlarpilsuz_2025_quasi-uniformity:
     cite: "DGLPS25"
-    short: "Dick, Goda, Pillichshammer, Suzuki (2025)"
+    short: "Dick, Goda, Larcher, Pillichshammer, Suzuki (2025)"
     full: "J. Dick, T. Goda, G Larcher, F. Pillichshammer, & K. Suzuki, On the quasi-uniformity properties of quasi-Monte Carlo point sets and sequences -- Part I: Lattices and Kronecker sequences, preprint (2025)."
     type: preprint
     tags: [qmc, covering distance, discrepancy]
