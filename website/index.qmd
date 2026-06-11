@@ -1,37 +1,19 @@
 ---
-title: "Fred J. Hickernell"
+title: "Personal Academic Library"
 ---
 
 Professor of Applied Mathematics  
 Illinois Institute of Technology
 
+This site collects my talks, publications, course materials, software projects, and other academic resources.
+
 ## Featured Resources
 
-- [MCQMC 2026 Plenary Slides](talks.qmd)
-- [QMCPy and QMCSoftware](software.qmd)
-- [Courses](courses.qmd)
-- [Publications](papers.qmd)
+- [MCQMC 2026 Plenary Slides](https://fjhickernell.github.io/MCQMC26/)
+- [QMCPy and QMCSoftware](https://qmcsoftware.github.io/QMCSoftware/)
 
 ## Research Interests
 
-- Monte Carlo Methods
-- Quasi-Monte Carlo Methods
-- Uncertainty Quantification
-- High-Dimensional Approximation
-- Information-Based Complexity
+(Quasi-)Monte Carlo Methods, Information-Based Complexity, High-Dimensional Integraton and Approximation, Uncertainty Quantification, Scientific Software
 
 
-## Navigation
-
-- [Talks](talks.qmd)
-- [Courses](courses.qmd)
-- [Software](software.qmd)
-- [Papers](papers.qmd)
-
-
-
-
-- [Talks](talks.qmd)
-- [Courses](courses.qmd)
-- [Software](software.qmd)
-- [Papers](papers.qmd)

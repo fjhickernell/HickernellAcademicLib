@@ -2,9 +2,9 @@
 title: "Talks"
 ---
 
-## Recent Talks
+| Recent |
+|------
+| [MCQMC 2026 Plenary and Special Session Talks](https://fjhickernell.github.io/MCQMC26/) |
+| [SIAM UQ 2026](https://fjhickernell.github.io/SIAMUQ26/) |
 
-| Talk | Slides |
-|------|---------|
-| MCQMC 2026 Plenary | Coming soon |
-| SIAM UQ 2026 | Coming soon |
+Some earliier talks are [Speaker Deck](https://speakerdeck.com/fjhickernell)

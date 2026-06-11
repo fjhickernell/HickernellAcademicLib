@@ -1,14 +1,27 @@
 project:
   type: website
   output-dir: _site
+  resources:
+    - classlib/quarto/**
 
 metadata-files:
-  - ../classlib/quarto/website/hickernell-website.yml
-  - ../classlib/quarto/metadata/hickernell-texts.yml
+  - classlib/quarto/website/hickernell-website.yml
+  - classlib/quarto/metadata/hickernell-texts.yml
+
+format:
+  html:
+    css:
+      - classlib/quarto/website/hickernell-website.css
+    include-in-header:
+      - classlib/quarto/slides/hickernell-latex-macros.js
+    link-external-newwindow: true
+    toc: true
+    toc-depth: 3
 
 website:
   title: "Fred J. Hickernell"
   navbar:
+    logo: classlib/quarto/assets/images/normal-scatter.png
     left:
       - href: index.qmd
         text: Home
@@ -16,20 +29,11 @@ website:
         text: Talks
       - href: courses.qmd
         text: Courses
-      - href: software.qmd
         text: Software
       - href: papers.qmd
-        text: Papers
+        text: Publications
+      - href: software.qmd
+        text: Software
   page-footer:
     center: |
       Created by Fred J. Hickernell with assistance from ChatGPT.
-
-format:
-  html:
-    css:
-      - ../classlib/quarto/website/hickernell-website.css
-    include-in-header:
-      - ../classlib/quarto/slides/hickernell-latex-macros.js
-    link-external-newwindow: true
-    toc: true
-    toc-depth: 3

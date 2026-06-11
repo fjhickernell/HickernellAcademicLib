@@ -6,6 +6,6 @@ title: "Courses"
 
 | Course | Website |
 |---------|---------|
-| MATH 476 | TBD |
-| MATH 563 | TBD |
-| MATH 565 | TBD |
+| MATH 476 | [Spring 2026](https://fjhickernell.github.io/MATH476Spring2026/) |
+| MATH 563 | [Spring 2026](https://fjhickernell.github.io/MATH563Spring2026/) |
+| MATH 565 | [Fall 2025](https://qmcsoftware.github.io/MATH565Fall2025/) |
