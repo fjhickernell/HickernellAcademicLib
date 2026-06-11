@@ -156,8 +156,26 @@ papers:
   matiukhadinghickernell_2026_quality_lattices:
     cite: "MDH26+"
     short: "Matiukha, Ding, Hickernell (2026)"
-    full: "Matiukha, Ding, Hickernell, The Quality of Lattice Sequences for Arbitrary Sample SizeQuality of Lattice Rules for Non-Periodic Integrands, preprint (2026)."
+    full: "L. Matiukha, Y. Ding, & F. J. Hickernell, The Quality of Lattice Sequences for Arbitrary Sample Size, preprint (2026)."
     type: preprint
     tags: [qmc, lattice-rules, sequences]
     arxiv: Null
     arxiv_url: Null
+
+  owen_2026_errorQMC:
+    cite: "O26"
+    short: "Owen (2026)"
+    full: "A. B. Owen, Error Estimation for Quasi-Monte Carlo, _Monte Carlo and Quasi-Monte Carlo 2024_, pp. 95–125, (2026)."
+    tags: [qmc, error]
+    doi: 10.1007/978-3-032-10590-5_4
+    doi_url: https://doi.org/10.1007/978-3-032-10590-5_4
+    publisher_url: "https://link.springer.com/chapter/10.1007/978-3-032-10590-5_4"
+
+  panowen_2023_super-polynomial_accuracy:
+    cite: "PO23"
+    short: "Pan & Owen (2023)"
+    full: "Y. Pan & A. B. Owen, Super-polynomial accuracy for lattice rules with random number of points, _Math. Comp._ 92, 805-37 (2023)."
+    type: article
+    tags: [qmc, lattice-rules, error]
+    doi: "10.1090/mcom/3791"
+    doi_url: "https://doi.org/10.1090/mcom/3791"
