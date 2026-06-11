@@ -27,13 +27,13 @@ website:
         text: Home
       - href: talks.qmd
         text: Talks
-      - href: courses.qmd
-        text: Courses
-        text: Software
       - href: papers.qmd
         text: Publications
       - href: software.qmd
         text: Software
+      - href: courses.qmd
+        text: Courses
+
   page-footer:
     center: |
       Created by Fred J. Hickernell with assistance from ChatGPT.
