@@ -1150,5 +1150,24 @@ h1::before,
     white-space: nowrap;
 }
 
+/* ============================================================
+   PDF export
+   Keep the title-slide background image,
+   but remove the blue Reveal stage background.
+   ============================================================ */
+
+html.print-pdf,
+html.print-pdf body,
+body.print-pdf,
+html.print-pdf .reveal-viewport,
+body.print-pdf .reveal-viewport,
+html.print-pdf .reveal,
+body.print-pdf .reveal,
+html.print-pdf .pdf-page,
+body.print-pdf .pdf-page {
+  background: white !important;
+  background-color: white !important;
+}
+
 /*-- end:scss --*/
 
