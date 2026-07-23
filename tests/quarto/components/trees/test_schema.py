@@ -64,10 +64,12 @@ class TreeSchemaTests(unittest.TestCase):
         self.assertEqual(tuple(tree.masks), ("root", "canopy"))
         self.assertTrue(tree.labels["cs"].content.trusted_html)
 
-    def test_loads_mc_placeholder(self) -> None:
+    def test_loads_mc_tree(self) -> None:
         tree = load_tree("mc")
-        self.assertEqual(tree.status, "placeholder")
-        self.assertIsNone(tree.image)
+        self.assertEqual(tree.status, "ready")
+        self.assertEqual(tuple(tree.groups), ("foundation", "methods", "practice"))
+        self.assertEqual(len(tree.labels), 26)
+        self.assertIsNotNone(tree.image)
 
     def test_rejects_unknown_and_missing_fields(self) -> None:
         unknown = valid_data()

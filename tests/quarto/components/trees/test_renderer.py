@@ -153,8 +153,15 @@ class TreeRendererTests(unittest.TestCase):
             render_tree("qmc", groups=["unknown"], asset_base_url=ASSET_BASE)
         with self.assertRaisesRegex(TreeRenderError, "undefined label"):
             render_tree("qmc", labels=["unknown"], asset_base_url=ASSET_BASE)
+        placeholder = validate_tree(
+            {
+                "schema_version": 1,
+                "id": "future-tree",
+                "status": "placeholder",
+            }
+        )
         with self.assertRaises(TreeNotReadyError):
-            render_tree("mc", asset_base_url=ASSET_BASE)
+            render_tree(placeholder, asset_base_url=ASSET_BASE)
 
 
 if __name__ == "__main__":

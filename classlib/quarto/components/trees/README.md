@@ -15,8 +15,8 @@ can explicitly share it.
 - `<tree-id>/tree.yml` contains a complete tree design
 - `<tree-id>/tree.scss` contains artwork- and tree-specific presentation
 
-`mc/tree.yml` is intentionally a placeholder. It proves that the registry can
-hold more than one tree without prematurely designing the Monte Carlo tree.
+The `qmc/` and `mc/` configurations share the physical artwork but independently
+define their groups, labels, positions, alignments, masks, and styling.
 
 ## Schema version 1
 
