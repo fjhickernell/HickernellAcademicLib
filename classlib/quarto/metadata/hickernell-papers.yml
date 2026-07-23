@@ -33,6 +33,13 @@
 
 papers:
 
+  wsj_monte_carlo_2016:
+    cite: "WSJ_MC_16"
+    short: "Craven McGinty (2016)"
+    full: "J. Craven McGinty, As Forecasts Go, You Can Bet on Monte Carlo, _Wall Street Journal_, August 12, 2016"
+    tags: [mc]
+    publisher_url: "https://www.wsj.com/articles/as-forecasts-go-you-can-bet-on-monte-carlo-1470994203"
+
   hickirsor_2026_qmc_tutorial:
     cite: "HKS26"
     short: "Hickernell, Kirk, Sorokin (2026)"

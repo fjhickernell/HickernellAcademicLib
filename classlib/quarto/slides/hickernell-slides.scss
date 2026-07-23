@@ -139,6 +139,7 @@ SECTION INDEX (scroll/search targets)
   • TABLES ........................ .reveal table
   • BULLETS ....................... .reveal ul + section.dash-bullets/circle-bullets
   • EXERCISES ..................... .exitem
+  • IMAGE SOURCES ................. a.image-source
   • INLINE HELPERS ................ .flexline, .line-right
 
 ===============================================================================
@@ -971,6 +972,60 @@ h1::before,
   font-size: 0.75em;
 }
 
+/* ==========================================================================
+   IMAGE SOURCE OVERLAY
+   --------------------------------------------------------------------------
+   Add .image-source to an image's external source link. The link itself is
+   the positioned wrapper, so the generated icon is clickable without adding
+   captions, source text, or extra HTML to a slide.
+   ========================================================================== */
+
+.reveal a.image-source {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  line-height: 0;
+  border: 0;
+  text-decoration: none;
+}
+
+.reveal a.image-source > img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+.reveal a.image-source::after {
+  content: "\2197";
+  position: absolute;
+  top: 0.35em;
+  right: 0.35em;
+  display: grid;
+  place-items: center;
+  width: 1.35em;
+  height: 1.35em;
+  border-radius: 0.2em;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0.1em rgba(0, 0, 0, 0.7);
+  text-shadow: 0 0.05em 0.12em rgba(0, 0, 0, 0.95);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.48em;
+  font-weight: 900;
+  -webkit-text-stroke: 0.1em currentColor;
+  line-height: 1;
+  opacity: 0.82;
+  pointer-events: none;
+  transition: opacity 140ms ease, background-color 140ms ease;
+}
+
+.reveal a.image-source:hover::after,
+.reveal a.image-source:focus-visible::after {
+  background: rgba(0, 0, 0, 0.68);
+  opacity: 0.95;
+}
+
 /* Header links: visible without underline */
 .reveal .slides section.slide:not(#title-slide) h1 a,
 .reveal .slides section.slide:not(#title-slide) h2 a {
@@ -1170,4 +1225,3 @@ body.print-pdf .pdf-page {
 }
 
 /*-- end:scss --*/
-

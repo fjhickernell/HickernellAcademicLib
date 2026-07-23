@@ -10,6 +10,7 @@ format:
 
     metadata-files:
       - ../classlib/classlib/quarto/metadata/hickernell-texts.yml
+      - ../classlib/classlib/quarto/metadata/hickernell-papers.yml
 
     include-in-header:
       - ../classlib/classlib/quarto/slides/hickernell-latex-macros.js
