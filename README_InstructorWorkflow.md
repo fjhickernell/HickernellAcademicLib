@@ -1,200 +1,169 @@
-# Instructor Workflow for Using HickernellClassLib with Course Repositories
+# Instructor Workflow for HickernellAcademicLib
 
-This document describes the recommended development and synchronization workflow for using **HickernellClassLib** across multiple Macs and across multiple course repositories (e.g., MATH565Fall2025, MATH476, MATH563).
+This document describes how to develop and use **HickernellAcademicLib**
+across multiple computers and multiple consumer repositories, including
+courses, talks, and other academic projects.
 
-It ensures:
+The workflow has two goals:
 
-- One canonical version of HickernellClassLib  
-- Clean and reproducible submodule versions for students  
-- Ability to develop from any Mac  
-- Smooth interaction with QMCSoftware (develop branch)  
-- Avoids notebooks importing the wrong copy  
+- maintain one canonical, reusable academic library;
+- let each consumer repository use an intentional, reproducible library
+  version.
 
----
+## Repository roles
 
-## 1. Canonical Source of Truth
+`HickernellAcademicLib` is the canonical source repository. It contains
+reusable code, Quarto styling, metadata, snippets, notebooks, and presentation
+infrastructure that are useful in more than one course or talk.
 
-The only editable copy of the library is located here on every Mac:
+A consumer repository normally mounts this repository at `classlib/` as a Git
+submodule. Consumer repositories contain their own course- or talk-specific
+content, configuration, navigation, schedules, and assets.
 
-```
-~/SoftwareRepositories/HickernellClassLib
-```
+Before moving a change into `HickernellAcademicLib`, ask whether it is
+genuinely reusable. Keep one-off content and local presentation adjustments in
+the consumer repository.
 
-All development edits should occur only in this clone and on the `main` branch.
+## Canonical checkout
 
-To sync it:
-
-```bash
-cd ~/SoftwareRepositories/HickernellClassLib
-git pull
-```
-
-Do **not** edit the `classlib/` folder inside course repos.
-
----
-
-## 2. Install HickernellClassLib (editable) into the qmcpy Conda environment
-
-On each Mac, run once:
+Keep one ordinary editable clone on each development computer:
 
 ```bash
-conda activate qmcpy
-cd ~/SoftwareRepositories/HickernellClassLib
-pip install -e .
+cd ~/SoftwareRepositories/HickernellAcademicLib
+git status
+git pull --ff-only
 ```
 
-Benefits:
+Inspect the worktree before pulling or editing. Do not overwrite or discard
+uncommitted work from another session.
 
-- `import classlib` loads the canonical version  
-- All courses see the same version  
-- No need for messing with `sys.path`  
-- No stale imports from submodules  
+Develop reusable changes in this canonical clone, not inside a consumer
+repository's `classlib/` checkout. Validate the library change in the canonical
+clone and in representative consumers when appropriate.
 
-Whenever you update the library for your own benefit:
+## Editable installation
+
+Install the canonical clone into the Python environment used for development:
 
 ```bash
-git pull
-pip install -e .   # usually unnecessary but safe
+cd ~/SoftwareRepositories/HickernellAcademicLib
+python -m pip install -e .
 ```
 
----
+Activate the appropriate virtual or Conda environment first when one is used.
+An editable installation makes `import classlib` resolve to the canonical
+development clone while consumer repositories retain pinned submodule
+versions for reproducible builds.
 
-## 3. Course Repositories Use Submodules
-
-Each course repo contains:
-
-- `classlib` → submodule pointing to HickernellClassLib  
-- `qmcpy` → submodule pointing to QMCSoftware *develop* branch  
-
-### Students update with:
+After switching computers or environments, verify where Python imports the
+package from:
 
 ```bash
-git pull
+python -c "import classlib; print(classlib.__file__)"
+```
+
+## Consumer repositories
+
+After cloning or pulling a course or talk repository, initialize the exact
+submodule commits recorded by that repository:
+
+```bash
 git submodule update --init --recursive
 ```
 
-### Instructor updates the classlib submodule pointer
+Routine setup and builds must use these recorded commits. Do not use
+`git submodule update --remote` as a routine synchronization command, because
+it replaces a reproducible pinned version with a moving branch tip.
 
-When you want students to receive the updated version:
+The consumer repository's own `AGENTS.md`, workflow documentation, and
+`.gitmodules` define which submodules are writable and how they may be
+updated. Do not assume that other dependencies follow the same policy as
+`classlib`.
+
+## Publishing a reusable library change
+
+In the canonical clone:
 
 ```bash
-cd ~/SoftwareRepositories/MATH565Fall2025
-git submodule update --remote classlib
+cd ~/SoftwareRepositories/HickernellAcademicLib
+git status
+git add <files>
+git commit -m "<describe the reusable change>"
+git push
+```
+
+Run the validation appropriate to the change before publishing it. Commit only
+the intended reusable work.
+
+Publishing the library does not automatically update any consumer. Each
+consumer remains pinned until its submodule pointer is deliberately advanced.
+
+## Updating a consumer's pinned `classlib` version
+
+First publish and identify the validated `HickernellAcademicLib` commit. Then,
+in the consumer repository:
+
+```bash
+git submodule update --init --recursive
+git -C classlib fetch origin
+git -C classlib checkout <validated-commit>
+```
+
+Validate the consumer with that exact commit. If the result is correct, record
+the new pointer in the consumer repository:
+
+```bash
 git add classlib
-git commit -m "Update classlib submodule to latest HickernellClassLib"
+git commit -m "Update classlib to <short-commit>"
 git push
 ```
 
-This ensures the course uses the exact version you select.
+Advancing the pointer is an intentional consumer change. Do not advance it
+merely because a newer library commit exists, and do not include unrelated
+submodule changes.
 
----
+## Working across computers
 
-## 4. QMCSoftware (develop branch)
+On the computer where reusable work is created, validate, commit, and push it
+from the canonical `HickernellAcademicLib` clone.
 
-Course repos track the **develop** branch of QMCSoftware.
-
-To update:
+On another computer, inspect the canonical clone and synchronize it before
+continuing:
 
 ```bash
-cd ~/SoftwareRepositories/MATH565Fall2025
-git submodule update --remote qmcpy
-git add qmcpy
-git commit -m "Update qmcpy to latest develop"
-git push
+cd ~/SoftwareRepositories/HickernellAcademicLib
+git status
+git pull --ff-only
+python -m pip install -e .
 ```
 
-### Stability Philosophy
-
-Your team develops in feature branches and only merges into `develop` after validation.  
-Therefore:
-
-- Updating your **own working copy** to the latest `develop` is safe and recommended.  
-- Updating the **course repo** should still be intentional—only when you have verified the notebooks still run correctly.
-
-If you need functionality not yet upstreamed:
-
-- Temporarily implement it in HickernellClassLib  
-- Or keep a temporary branch  
-- Upstream later when appropriate  
-
----
-
-## 5. Workflow Across Macs
-
-You may edit HickernellClassLib from **any** Mac.
-
-### On Mac A (where you make edits):
+Consumer repositories synchronize independently. Pull the consumer and restore
+its recorded submodule state:
 
 ```bash
-cd ~/SoftwareRepositories/HickernellClassLib
-git add .
-git commit -m "Work done"
-git push
-```
-
-### On Mac B:
-
-```bash
-cd ~/SoftwareRepositories/HickernellClassLib
-git pull
-```
-
-### To update the course repo afterward (optional):
-
-```bash
-cd ~/SoftwareRepositories/MATH565Fall2025
-git submodule update --remote classlib
-git add classlib
-git commit -m "Update HickernellClassLib submodule"
-git push
-```
-
----
-
-## 6. Why This Model Works
-
-- Prevents unsynchronized library versions across Macs  
-- Eliminates “wrong library imported” issues in Jupyter  
-- Course repos remain clean snapshots for each semester  
-- Students use stable, pinned versions  
-- HickernellClassLib remains a general library across all courses  
-- QMCSoftware develop remains stable but **course repo updates remain intentional**  
-
----
-
-## 7. Daily Instructor Checklist
-
-Before working on any course:
-
-```bash
-conda activate qmcpy
-cd ~/SoftwareRepositories/HickernellClassLib
-git pull
-pip install -e .
-
-cd ~/SoftwareRepositories/MATH565Fall2025
-git pull
+git pull --ff-only
 git submodule update --init --recursive
 ```
 
-When you want students to receive updates:
+This keeps reusable development synchronized while preserving each course or
+talk as a reproducible snapshot.
 
-```bash
-cd ~/SoftwareRepositories/MATH565Fall2025
-git submodule update --remote classlib
-git add classlib
-git commit -m "Update HickernellClassLib version"
-git push
-```
+## Checklist
 
-When you want students to receive a newer QMCSoftware develop:
+Before reusable library work:
 
-```bash
-git submodule update --remote qmcpy
-git add qmcpy
-git commit -m "Update qmcpy to latest develop"
-git push
-```
+- inspect the canonical clone's branch, status, and recent commits;
+- synchronize without discarding local changes;
+- confirm that the proposed change is reusable;
+- check relevant consumer repositories for pre-existing work.
 
----
+Before updating a consumer:
 
+- publish and identify the validated library commit;
+- inspect the consumer repository and all relevant submodules;
+- check out the exact library commit in `classlib/`;
+- validate the consumer;
+- commit only the intentional submodule-pointer change.
+
+This model gives every course and talk stable inputs while allowing
+`HickernellAcademicLib` to evolve as one shared academic library.
