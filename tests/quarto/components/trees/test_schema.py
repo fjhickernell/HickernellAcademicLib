@@ -68,7 +68,7 @@ class TreeSchemaTests(unittest.TestCase):
         tree = load_tree("mc")
         self.assertEqual(tree.status, "ready")
         self.assertEqual(tuple(tree.groups), ("foundation", "methods", "practice"))
-        self.assertEqual(len(tree.labels), 26)
+        self.assertEqual(len(tree.labels), 28)
         self.assertIsNotNone(tree.image)
 
     def test_rejects_unknown_and_missing_fields(self) -> None:

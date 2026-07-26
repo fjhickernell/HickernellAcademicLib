@@ -56,11 +56,12 @@ groups:
         bayesian-computation,
         data-driven,
         software,
+        monte-carlo-tree-search,
         hpc,
         ai,
         community
       ]
-    position: {left: "38%", top: "18%"}
+    position: {left: "35%", top: "20%"}
 
 labels:
   probability:
@@ -177,7 +178,12 @@ labels:
 
   software:
     text: "Software"
-    position: {left: "58%", top: "25%"}
+    position: {left: "52%", top: "29%"}
+    align: center
+
+  monte-carlo-tree-search:
+    html: "Monte Carlo<br>Tree Search"
+    position: {left: "56%", top: "17%"}
     align: center
 
   hpc:
