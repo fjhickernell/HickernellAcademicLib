@@ -1,18 +1,18 @@
 ---
-title: "Git setup: clone the course repo and keep it updated"
+title: "Git setup: clone the course repository and keep it updated"
 format:
   html:
     toc: true
 ---
 
-This course uses a Git repository that includes **submodules** (shared libraries pulled in as separate Git repos).
-To get everything working, you must clone the repo **and** initialize the submodules.
+This course uses a Git repository that includes **submodules** (shared libraries pulled in as separate Git repositories).
+To get everything working, you must clone the course repository **and** initialize the submodules.
 
 ## Important: do **not** push to the course repository
 
 Students should assume the course repository is **read-only**:
 
-- Do **not** try to push changes to the course repo.
+- Do **not** try to push changes to the course repository.
 - If you see errors like “permission denied” when pushing, that is expected.
 
 You will **not** submit homework via Git. Git is used only to:
@@ -30,12 +30,12 @@ You need:
 - Git installed
 - A way to authenticate with GitHub (either **SSH** or **HTTPS**)
 
-Your instructor will provide the course repo URL. It looks like one of these:
+Your instructor will provide the course repository URL. It looks like one of these:
 
 - SSH: `git@github.com:ORG/MATHXXXSpring20YY.git`
 - HTTPS: `https://github.com/ORG/MATHXXXSpring20YY.git`
 
-## Step 1: Clone the course repo *with* submodules
+## Step 1: Clone the course repository *with* submodules
 
 Choose **one** of the following.
 
@@ -57,7 +57,7 @@ git submodule update --init --recursive
 
 ## Step 2: Verify you have the submodule content
 
-From inside the course repo:
+From inside the course repository:
 
 ```bash
 git submodule status
@@ -73,14 +73,14 @@ git submodule update --init --recursive
 
 Do this whenever your instructor says “pull the latest changes.”
 
-From inside the course repo:
+From inside the course repository:
 
 ```bash
 git pull --ff-only
 git submodule update --init --recursive
 ```
 
-That second command is important: it updates submodules to the versions pinned by the course repo.
+That second command is important: it updates submodules to the versions pinned by the course repository.
 
 ## If you already made local changes
 
@@ -119,8 +119,8 @@ Use this only if you want to push your work to GitHub for backup/versioning.
 
 ### One-time setup (fork + clone)
 
-1. Fork the course repo on GitHub into **your own** GitHub account.
-2. Clone **your fork** (not the instructor repo) with submodules.
+1. Fork the course repository on GitHub into **your own** GitHub account.
+2. Clone **your fork** (not the instructor's course repository) with submodules.
 
 Replace `FORK_URL` with your fork’s URL:
 
@@ -129,9 +129,9 @@ git clone --recurse-submodules FORK_URL
 cd MATHXXXSpring20YY
 ```
 
-3. Add the instructor repo as `upstream` so you can pull course updates.
+3. Add the instructor's course repository as `upstream` so you can pull course updates.
 
-Replace `UPSTREAM_URL` with the instructor repo URL:
+Replace `UPSTREAM_URL` with the instructor's course repository URL:
 
 ```bash
 git remote add upstream UPSTREAM_URL
@@ -150,12 +150,12 @@ git submodule update --init --recursive
 git push
 ```
 
-If the course repo uses a branch other than `main` (e.g., `master`), replace `main` above accordingly.
+If the course repository uses a branch other than `main` (e.g., `master`), replace `main` above accordingly.
 
 ## Common issues and fixes
 
 ### “fatal: not a git repository”
-You’re not inside the course repo folder. Change into it:
+You’re not inside the course repository folder. Change into it:
 
 ```bash
 cd MATHXXXSpring20YY
@@ -172,7 +172,7 @@ git submodule update --init --recursive
 ```
 
 ### You accidentally cloned without submodules
-From inside the repo:
+From inside the course repository:
 
 ```bash
 git submodule update --init --recursive

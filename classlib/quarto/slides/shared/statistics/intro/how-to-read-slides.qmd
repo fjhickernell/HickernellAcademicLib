@@ -1,6 +1,6 @@
 # How to read these slides
 
-These slides are written in [Quarto](https://quarto.org/) and the source code is available on the class repository, [{{< meta course_repo_label >}}]({{< meta course_repo >}})
+These slides are written in [Quarto](https://quarto.org/) and the source code is available in the course repository, [{{< meta course_repo_label >}}]({{< meta course_repo >}})
 
 &nbsp;
 
@@ -30,6 +30,5 @@ Mathematical formulas are written in [LaTeX](https://www.latex-project.org/) syn
 $$
 \int_a^b f(x) \, \dif x \approx \sum_{i=1}^n w_i f(x_i)
 $$
-
 
 
