@@ -292,6 +292,7 @@
         hp:    "{\\widehat{p}}",
         hJ:    "{\\widehat{J}}",
         hf:    "{\\widehat{f}}",
+        hF:    "{\\widehat{F}}",
         hP:     "{\\widehat{P}}",
         hX:     "{\\widehat{X}}",
         hY:     "{\\widehat{Y}}",
