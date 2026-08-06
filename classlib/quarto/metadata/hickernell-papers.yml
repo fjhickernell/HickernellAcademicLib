@@ -51,6 +51,16 @@ papers:
     arxiv_url: "https://arxiv.org/abs/2502.03644"
     publisher_url: "https://link.springer.com/chapter/10.1007/978-3-032-10590-5_1"
 
+  razavi_2026_sobol_sensitivity:
+    cite: "R26"
+    short: "Razavi (2026)"
+    full: "S. Razavi, Ilya M. Sobol’ (1926–2025): The Question That Shaped Global Sensitivity Analysis, _Environmental Modelling & Software_, 107117 (2026)."
+    type: article
+    tags: [sensitivity-analysis, sobol]
+    doi: "10.1016/j.envsoft.2026.107117"
+    doi_url: "https://doi.org/10.1016/j.envsoft.2026.107117"
+    publisher_url: "https://www.sciencedirect.com/science/article/pii/S1364815226002641"
+
 
   halton_1960_sequences:
     cite: H60
