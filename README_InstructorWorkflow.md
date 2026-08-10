@@ -66,21 +66,13 @@ python -c "import classlib; print(classlib.__file__)"
 
 ## Consumer repositories
 
-After cloning or pulling a consumer repository, initialize the exact submodule
-commits recorded by that repository:
+The authoritative [consumer-adoption contract](docs/consumer-adoption.md)
+defines how every durable consumer initializes, discovers, audits, and
+intentionally updates its pinned `classlib` dependency. Use its bootstrap for
+new repositories and its read-only check during normal consumer validation.
 
-```bash
-git submodule update --init --recursive
-```
-
-Routine setup and builds must use these recorded commits. Do not use
-`git submodule update --remote` as a routine synchronization command, because
-it replaces a reproducible pinned version with a moving branch tip.
-
-The consumer repository's own `AGENTS.md`, workflow documentation, and
-`.gitmodules` define which submodules are writable and how they may be
-updated. Do not assume that other dependencies follow the same policy as
-`classlib`.
+The consumer's own instructions still define the policy for other
+dependencies; do not assume they follow the `classlib` model.
 
 ## Publishing a reusable library change
 
@@ -102,27 +94,9 @@ consumer remains pinned until its submodule pointer is deliberately advanced.
 
 ## Updating a consumer's pinned `classlib` version
 
-First publish and identify the validated `HickernellAcademicLib` commit. Then,
-in the consumer repository:
-
-```bash
-git submodule update --init --recursive
-git -C classlib fetch origin
-git -C classlib checkout <validated-commit>
-```
-
-Validate the consumer with that exact commit. If the result is correct, record
-the new pointer in the consumer repository:
-
-```bash
-git add classlib
-git commit -m "Update classlib to <short-commit>"
-git push
-```
-
-Advancing the pointer is an intentional consumer change. Do not advance it
-merely because a newer library commit exists, and do not include unrelated
-submodule changes.
+Follow the intentional pointer-update procedure in the [consumer-adoption
+contract](docs/consumer-adoption.md). Publishing the library never advances a
+consumer automatically.
 
 ## Working across computers
 
@@ -164,6 +138,7 @@ Before updating a consumer:
 - publish and identify the validated library commit;
 - inspect the consumer repository and all relevant submodules;
 - check out the exact library commit in `classlib/`;
+- run the consumer-bootstrap check;
 - validate the consumer;
 - commit only the intentional submodule-pointer change.
 

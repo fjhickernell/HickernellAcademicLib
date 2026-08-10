@@ -82,22 +82,11 @@ migrated, its current consumer guide remains authoritative for that consumer.
 
 ## Consumer repository pattern
 
-Every new course, talk, seminar, workshop, or website repository using
-`classlib` should:
-
-1. Include `classlib` as a pinned submodule.
-2. State in its repository-level `AGENTS.md` that authority flows from the
-   global `SharedConfigs/codex/AGENTS.md`, to `classlib/AGENTS.md`, to local
-   exceptions.
-3. Require contributors to consult `classlib/AGENTS.md` before substantially
-   revising slides, webpages, reusable components, shared styling, or notebook
-   presentation.
-4. Keep local guidance limited to project-specific policies, terminology,
-   notation, navigation, validation, and intentional exceptions.
-
-Do not duplicate universal guidance in the consumer repository. If local and
-shared guidance appear to conflict, follow a documented local exception and
-flag any apparent accidental inconsistency.
+Every new course, conference talk, seminar, workshop, website, or other
+consumer must follow the authoritative [consumer-adoption
+contract](docs/consumer-adoption.md). Use its bootstrap tool so the pinned
+submodule and root `AGENTS.md` make this shared guidance discoverable without
+copying it locally.
 
 ## API stability and backward compatibility
 

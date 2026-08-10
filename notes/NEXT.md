@@ -23,13 +23,6 @@ If yes:
 - Establish authoritative shared slide and webpage style guides, including
   teaching and research-presentation profiles where they genuinely differ;
   then migrate universal guidance from consuming repositories deliberately
-- Standardize how new consumers adopt `classlib`: define a bootstrap that makes
-  every future course, conference, seminar, workshop, or talk repository
-  explicitly reference the authoritative shared guidance, eliminates duplicate
-  universal style rules without sacrificing discoverability, and preserves
-  local exceptions. Evaluate a repository template, bootstrap document,
-  automation script, and other approaches before selecting or implementing a
-  mechanism
 - Generalize notebook visualization helpers
 - Improve the tree-marker framework
 - Reduce duplicated Quarto templates
