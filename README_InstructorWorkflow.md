@@ -2,7 +2,8 @@
 
 This document describes how to develop and use **HickernellAcademicLib**
 across multiple computers and multiple consumer repositories, including
-courses, talks, and other academic projects.
+courses, conference talks, seminars, workshops, websites, and other academic
+projects.
 
 The workflow has two goals:
 
@@ -13,16 +14,17 @@ The workflow has two goals:
 ## Repository roles
 
 `HickernellAcademicLib` is the canonical source repository. It contains
-reusable code, Quarto styling, metadata, snippets, notebooks, and presentation
-infrastructure that are useful in more than one course or talk.
+reusable code, Quarto styling, metadata, snippets, notebooks, slide fragments,
+webpages, teaching content, and presentation components useful to more than one
+consumer.
 
 A consumer repository normally mounts this repository at `classlib/` as a Git
-submodule. Consumer repositories contain their own course- or talk-specific
-content, configuration, navigation, schedules, and assets.
+submodule. Consumer repositories contain their own project-specific content,
+configuration, navigation, schedules or event details, and assets.
 
 Before moving a change into `HickernellAcademicLib`, ask whether it is
-genuinely reusable. Keep one-off content and local presentation adjustments in
-the consumer repository.
+genuinely reusable. Keep consumer-specific content and local presentation
+adjustments in the consumer repository.
 
 ## Canonical checkout
 
@@ -64,8 +66,8 @@ python -c "import classlib; print(classlib.__file__)"
 
 ## Consumer repositories
 
-After cloning or pulling a course or talk repository, initialize the exact
-submodule commits recorded by that repository:
+After cloning or pulling a consumer repository, initialize the exact submodule
+commits recorded by that repository:
 
 ```bash
 git submodule update --init --recursive
@@ -165,5 +167,5 @@ Before updating a consumer:
 - validate the consumer;
 - commit only the intentional submodule-pointer change.
 
-This model gives every course and talk stable inputs while allowing
+This model gives every consumer stable inputs while allowing
 `HickernellAcademicLib` to evolve as one shared academic library.

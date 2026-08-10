@@ -1,0 +1,46 @@
+# NEXT
+
+## Current focus
+
+No active shared-resource task.
+
+When working in a consuming repository, always ask:
+
+- Is this reusable?
+- Does it belong in `classlib` instead?
+
+If yes:
+
+1. Implement here.
+2. Validate here.
+3. Publish here.
+4. Update consuming repositories.
+
+## Candidate improvements
+
+- Further consolidate shared SCSS
+- Expand reusable Reveal.js components
+- Establish authoritative shared slide and webpage style guides, including
+  teaching and research-presentation profiles where they genuinely differ;
+  then migrate universal guidance from consuming repositories deliberately
+- Standardize how new consumers adopt `classlib`: define a bootstrap that makes
+  every future course, conference, seminar, workshop, or talk repository
+  explicitly reference the authoritative shared guidance, eliminates duplicate
+  universal style rules without sacrificing discoverability, and preserves
+  local exceptions. Evaluate a repository template, bootstrap document,
+  automation script, and other approaches before selecting or implementing a
+  mechanism
+- Generalize notebook visualization helpers
+- Improve the tree-marker framework
+- Reduce duplicated Quarto templates
+- Improve documentation and examples
+- Audit shared APIs for consistency
+
+## Questions to resolve
+
+- Which consumer-specific utilities or content should migrate into `classlib`?
+- Are additional shared slide fragments warranted?
+- Which rules in current consumer style guides are universal, and which are
+  genuine local exceptions?
+- Which repeated inline layouts in research talks warrant shared semantic
+  components rather than local styling?
