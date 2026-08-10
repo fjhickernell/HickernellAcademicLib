@@ -54,6 +54,31 @@ as a submodule. Do not substitute a generic `python3`, `python3.13`, or other
 kernel merely because that submodule is absent. Use a different environment
 only when the project explicitly requires one.
 
+## Mathematical use of stability terminology
+
+In notebooks, slides, webpages, assignments, and other teaching materials,
+reserve **stable**, **stability**, and **stabilize** for situations where
+mathematical stability is actually the concept being discussed. Do not use
+these words informally merely to say that an estimate changes less as the
+sample size increases.
+
+Describe the behavior precisely:
+
+- Use **converges** only when mathematical or statistical convergence toward
+  a limiting value is intended.
+- Use **sampling variability decreases** when repeated estimates become less
+  variable as the sample size increases.
+- Use **the estimates concentrate more tightly around ...** when emphasizing
+  the distribution of repeated estimates.
+- Use **the fluctuations become smaller** for an intuitive description of a
+  plot.
+- Use **the error decreases** when the plotted or analyzed quantity is the
+  error.
+
+Do not mechanically replace **stabilizes** with **converges**. Distinguish
+convergence toward a limiting value from decreasing variability around that
+value, and state both when both behaviors matter.
+
 ## Shared slides and webpages
 
 Write reusable content for its medium:
