@@ -44,6 +44,16 @@ use neutral placeholders such as `MATHxxx`, `Course Name`, `Talk Title`, or
 `Presentation Name`. Parameterize necessary consumer context so shared
 resources can be reused without modification.
 
+## Notebook runtime
+
+Use the `qmcpy` Python environment and Jupyter kernel by default for Jupyter
+notebooks and Quarto Python execution in courses, conference talks, seminars,
+workshops, research projects, websites, and other consumers. This is the
+standard runtime even when the consumer does not include QMCSoftware/`qmcpy`
+as a submodule. Do not substitute a generic `python3`, `python3.13`, or other
+kernel merely because that submodule is absent. Use a different environment
+only when the project explicitly requires one.
+
 ## Shared slides and webpages
 
 Write reusable content for its medium:
