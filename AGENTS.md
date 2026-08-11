@@ -91,6 +91,8 @@ Write reusable content for its medium:
 - Omit terminal periods and prose-list punctuation unless needed for clarity
 - Use complete sentences when precision requires them, including definitions,
   policies, quotations, warnings, and carefully worded conclusions
+- Prefer `[key concept]{.alert}` over Markdown bold (`**key concept**`) for
+  emphasis in slides
 - Shared webpages may use fuller prose because readers must follow them without
   a speaker
 - Preserve mathematical and conceptual precision in both media
