@@ -93,6 +93,7 @@ Write reusable content for its medium:
   policies, quotations, warnings, and carefully worded conclusions
 - Prefer `[key concept]{.alert}` over Markdown bold (`**key concept**`) for
   emphasis in slides
+- Prefer `\implies` over `\Rightarrow` for mathematical implication
 - Shared webpages may use fuller prose because readers must follow them without
   a speaker
 - Preserve mathematical and conceptual precision in both media
