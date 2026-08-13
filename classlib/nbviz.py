@@ -9,6 +9,7 @@ Features
 - Session configuration for figure paths, save format, and epsilon (`configure`).
 - Convenient `savefig("name")` that respects configured path/format.
 - Log–log trend-line fit + overlay (`fit_log_trend`, `plot_log_trend_line`).
+- Textbook-style matrix display (`show_mat`, `show_augmented`, `show_blocks`).
 - Simple notebook highlight CSS injection for tagged cells (id="nbviz-highlight").
 """
 
@@ -20,9 +21,11 @@ from typing import Iterable
 import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt
-from IPython.display import display, HTML, Latex
+from IPython.display import display, HTML, Latex, Math
 from cycler import cycler
 import pandas as pd
+import sympy as sp
+from sympy import Matrix
 
 __all__ = [
     "init", "configure", "savefig",
@@ -30,7 +33,8 @@ __all__ = [
     "tol_colors",
     "fit_log_trend", "plot_log_trend_line",
     "TOL_BRIGHT", "TOL_BRIGHT_ORDER", "TINY", 
-    "note",  "note_md", "display_latex_df", "DEFAULT_MATH_RENAME"
+    "note",  "note_md", "display_latex_df", "DEFAULT_MATH_RENAME",
+    "show_mat", "show_augmented", "show_blocks"
 ]
 
 # ---- Defaults / constants ----
@@ -465,6 +469,37 @@ def note_md(text: str):
     return HTML(f'<div class="highlight-note">{inner_html}</div>')
 
 
+# ---- Matrix display helpers (JupyterLab-friendly) ----
+
+def show_mat(*objects) -> None:
+    """Display arrays or SymPy matrices as separate typeset matrices."""
+    for obj in objects:
+        display(Matrix(obj))
+
+
+def show_augmented(A, b) -> None:
+    """Display the augmented matrix [A | b] with a visible divider."""
+    A_display = Matrix(A)
+    b_display = Matrix(b)
+    if A_display.rows != b_display.rows:
+        raise ValueError("A and b must have the same number of rows")
+
+    entries = [
+        list(A_display.row(i)) + list(b_display.row(i))
+        for i in range(A_display.rows)
+    ]
+    body = r" \\ ".join(
+        " & ".join(sp.latex(entry) for entry in row) for row in entries
+    )
+    columns = "c" * A_display.cols + "|" + "c" * b_display.cols
+    display(Math(rf"\left[\begin{{array}}{{{columns}}}{body}\end{{array}}\right]"))
+
+
+def show_blocks(*block_rows) -> None:
+    """Display a block matrix; pass one list of blocks per block row."""
+    display(sp.BlockMatrix([[Matrix(block) for block in row] for row in block_rows]))
+
+
 # ---- DataFrame display helper (JupyterLab-friendly) ----
 
 DEFAULT_MATH_RENAME = {
@@ -505,5 +540,3 @@ def display_latex_df(
     )
 
     display(styler)
-
-

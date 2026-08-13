@@ -10,6 +10,8 @@ seminars, workshops, websites, notebooks, and future academic projects.
   for developing, publishing, and consuming the library
 - [notes/NEXT.md](notes/NEXT.md) — current shared-resource focus, candidates,
   and unresolved questions
+- [Notebook matrix display helpers](docs/notebook-matrix-display.md) — concise
+  SymPy-backed display for matrices, augmented matrices, and block matrices
 - [Tree component documentation](classlib/quarto/components/trees/README.md) —
   representative component API and usage guide
 
