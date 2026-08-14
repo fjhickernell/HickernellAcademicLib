@@ -101,6 +101,9 @@ Write reusable content for its medium:
 - Use progressive disclosure only when it improves understanding
 - Prefer shared semantic CSS classes and reusable components over inline or
   consumer-local styling
+- When two adjacent content columns need a deliberate visual gutter, use the
+  **Pomona gutter**: two 47% content columns separated by an empty 6% column.
+  Prefer this readable Quarto structure over one-off CSS for an isolated slide
 - Avoid consumer-specific assumptions unless explicitly parameterized
 
 Teaching decks and research talks may need different presentation profiles;
