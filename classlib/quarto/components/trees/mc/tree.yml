@@ -97,7 +97,7 @@ labels:
     align: center
 
   low-discrepancy:
-    html: "Low Discrepancy<br>Sequences"
+    html: "Low<br>Discrepancy"
     position: {left: "20%", top: "70%"}
     align: center
 
@@ -108,12 +108,12 @@ labels:
 
   pseudorandom-numbers:
     html: "Pseudorandom<br>Numbers"
-    position: {left: "43%", top: "67%"}
+    position: {left: "61%", top: "70%"}
     align: center
 
   error-assessment:
     html: "Error<br>Assessment"
-    position: {left: "61%", top: "70%"}
+    position: {left: "43%", top: "67%"}
     align: center
 
   discrepancy:
