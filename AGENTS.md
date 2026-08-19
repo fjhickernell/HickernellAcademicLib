@@ -93,6 +93,16 @@ Write reusable content for its medium:
   policies, quotations, warnings, and carefully worded conclusions
 - Prefer `[key concept]{.alert}` over Markdown bold (`**key concept**`) for
   emphasis in slides
+- Keep text links visibly identifiable as links. Do not apply `.alert` or
+  another color override to an entire text link; put that emphasis beside the
+  link or on only part of a longer linked phrase
+- Nested semantic styling may override part of a link when surrounding linked
+  text still carries the link styling. For example,
+  `[Companion \`NotebookName\` notebook](...)` may preserve inline-code styling
+  on the notebook name because the surrounding linked words identify the
+  whole phrase as a link. If the whole label would be inline code or another
+  override, add descriptive linked text or otherwise preserve a visible link
+  cue
 - Prefer `\implies` over `\Rightarrow` for mathematical implication
 - Shared webpages may use fuller prose because readers must follow them without
   a speaker
