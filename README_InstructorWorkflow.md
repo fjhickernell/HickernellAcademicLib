@@ -26,7 +26,7 @@ Before moving a change into `HickernellAcademicLib`, ask whether it is
 genuinely reusable. Keep consumer-specific content and local presentation
 adjustments in the consumer repository.
 
-## Canonical checkout
+## Development and canonical checkouts
 
 Keep one ordinary editable clone on each development computer:
 
@@ -39,9 +39,19 @@ git pull --ff-only
 Inspect the worktree before pulling or editing. Do not overwrite or discard
 uncommitted work from another session.
 
-Develop reusable changes in this canonical clone, not inside a consumer
-repository's `classlib/` checkout. Validate the library change in the canonical
-clone and in representative consumers when appropriate.
+When a reusable change must be seen or exercised in a real course, talk, or
+other project, prototype it inside that active consumer repository's pinned
+`classlib/` checkout and validate it immediately with the consumer's actual
+slides, website, notebooks, or build. If no consumer is specified, ask which
+active consumer to use when the choice matters; otherwise choose a suitable
+repository currently under construction, preferring the current repository
+when it is representative.
+
+Do not publish a divergent shared change from a consumer submodule. Once the
+prototype is validated in context, transfer it to the canonical clone, perform
+the appropriate canonical and representative-consumer validation, and commit
+and push it there. Then update each intended consumer to the resulting exact
+commit.
 
 ## Editable installation
 
@@ -128,10 +138,14 @@ talk as a reproducible snapshot.
 
 Before reusable library work:
 
-- inspect the canonical clone's branch, status, and recent commits;
-- synchronize without discarding local changes;
+- choose an active consumer that provides a representative development and
+  validation context;
+- inspect the consumer and its pinned `classlib/` checkout before editing;
+- prototype the reusable change in that checkout and validate the consumer;
+- inspect and synchronize the canonical clone without discarding local work;
+- transfer the validated reusable change to the canonical clone;
 - confirm that the proposed change is reusable;
-- check relevant consumer repositories for pre-existing work.
+- check other relevant consumer repositories for pre-existing work.
 
 Before updating a consumer:
 

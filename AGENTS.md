@@ -36,6 +36,28 @@ Before implementing a feature, ask:
 3. Broadly useful beyond these consumers? Consider an upstream project or
    standalone package.
 
+## Development checkout
+
+Prototype and validate a reusable `classlib` change inside the pinned
+`classlib/` checkout of an active consumer repository whenever the change
+needs to be seen or exercised in that consumer's actual slides, website,
+notebooks, or build. This keeps the shared source and its representative use
+together during development and makes visual and integration review immediate.
+
+If the user does not name a consumer, ask which active consumer to use when
+the choice could materially affect the result. Otherwise, choose a suitable
+active repository currently under construction, preferring the current
+repository when it provides a representative validation context. Do not use
+an older or reference-only consumer for development without explicit
+authorization.
+
+Treat work in a consumer's `classlib/` checkout as an uncommitted prototype.
+After it is validated in context, transfer the reusable change to the
+authoritative `HickernellAcademicLib` checkout, validate it there as
+appropriate, commit and push it upstream, and then intentionally update the
+consumer's pinned submodule commit. Do not commit a divergent shared change
+only inside a consumer submodule.
+
 ## Consumer neutrality
 
 Avoid assumptions tied to one consumer, including MATH 332, MATH 565, Fall
@@ -80,6 +102,11 @@ convergence toward a limiting value from decreasing variability around that
 value, and state both when both behaviors matter.
 
 ## Shared slides and webpages
+
+For diagrams and specialized visual layouts in RevealJS, follow
+[`docs/revealjs-diagram-construction.md`](docs/revealjs-diagram-construction.md),
+including its choice of HTML/CSS versus SVG, explicit grid-placement,
+asset-path, accessibility, and render-inspection requirements.
 
 Write reusable content for its medium:
 
