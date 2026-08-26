@@ -12,6 +12,9 @@ seminars, workshops, websites, notebooks, and future academic projects.
   and unresolved questions
 - [Notebook matrix display helpers](docs/notebook-matrix-display.md) — concise
   SymPy-backed display for matrices, augmented matrices, and block matrices
+- [Notebook replication-band plots](docs/notebook-replication-bands.md) —
+  median and percentile bands for precomputed replications, with optional
+  fitted log--log trends
 - [Tree component documentation](classlib/quarto/components/trees/README.md) —
   representative component API and usage guide
 

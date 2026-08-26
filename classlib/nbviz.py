@@ -9,6 +9,8 @@ Features
 - Session configuration for figure paths, save format, and epsilon (`configure`).
 - Convenient `savefig("name")` that respects configured path/format.
 - Log–log trend-line fit + overlay (`fit_log_trend`, `plot_log_trend_line`).
+- Replication median/IQR bands with optional fitted trends
+  (`plot_replication_band`).
 - Textbook-style matrix display (`show_mat`, `show_augmented`, `show_blocks`).
 - Simple notebook highlight CSS injection for tagged cells (id="nbviz-highlight").
 """
@@ -16,7 +18,7 @@ Features
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Iterable
+from typing import Any, Iterable, Mapping
 
 import numpy as np
 import matplotlib as mpl
@@ -31,7 +33,7 @@ __all__ = [
     "init", "configure", "savefig",
     "set_tol_color_cycle", "set_highlight_color",
     "tol_colors",
-    "fit_log_trend", "plot_log_trend_line",
+    "fit_log_trend", "plot_log_trend_line", "plot_replication_band",
     "TOL_BRIGHT", "TOL_BRIGHT_ORDER", "TINY", 
     "note",  "note_md", "display_latex_df", "DEFAULT_MATH_RENAME",
     "show_mat", "show_augmented", "show_blocks"
@@ -347,6 +349,121 @@ def plot_log_trend_line(
 
     ax.loglog([x0, x1], [y0, y1], color=color, linestyle=ls, label=label)
     return power, coef
+
+
+def plot_replication_band(
+    ax: plt.Axes,
+    x: Iterable[float],
+    values: np.ndarray,
+    *,
+    replication_axis: int = 0,
+    percentiles: tuple[float, float, float] = (25, 50, 75),
+    color: str | None = None,
+    label: str | None = None,
+    line_kwargs: Mapping[str, Any] | None = None,
+    band_alpha: float = 0.15,
+    band_kwargs: Mapping[str, Any] | None = None,
+    fit_trend: bool = False,
+    trend_n_which: slice | np.ndarray | None = None,
+    trend_w: float | Iterable[float] | None = 1.0,
+    trend_kwargs: Mapping[str, Any] | None = None,
+    slope_in_label: bool = False,
+    slope_decimals: int = 2,
+) -> dict[str, Any]:
+    """Plot a median curve and middle replication band from computed values.
+
+    ``values`` must contain one axis of independent replications. Collapsing
+    that axis must leave a one-dimensional sequence aligned with ``x``. The
+    default percentiles plot the median and middle 50% of the replications.
+
+    When ``fit_trend`` is true, a log--log least-squares trend is overlaid.
+    Each displayed point has equal weight by default; use ``trend_w`` to
+    choose another weighting. Set ``slope_in_label`` to append the fitted
+    power to the median-curve legend label. The caller remains responsible
+    for axis labels and scales; fitting a trend sets both axes to logarithmic
+    scales through :func:`plot_log_trend_line`.
+
+    Returns the summary arrays, Matplotlib artists, and fitted trend
+    parameters so callers can reuse them without recomputing percentiles.
+    """
+    x_arr = np.asarray(list(x), dtype=float).ravel()
+    values_arr = np.asarray(values, dtype=float)
+    percentile_arr = np.asarray(percentiles, dtype=float)
+
+    if values_arr.ndim == 0:
+        raise ValueError("values must have a replication axis")
+    if percentile_arr.shape != (3,):
+        raise ValueError("percentiles must contain exactly three values")
+    if (
+        np.any(percentile_arr < 0)
+        or np.any(percentile_arr > 100)
+        or np.any(np.diff(percentile_arr) <= 0)
+    ):
+        raise ValueError(
+            "percentiles must be strictly increasing values between 0 and 100"
+        )
+    if percentile_arr[1] != 50:
+        raise ValueError("the center percentile must be 50 (the median)")
+    if slope_in_label and not fit_trend:
+        raise ValueError("slope_in_label requires fit_trend=True")
+
+    summary = np.percentile(
+        values_arr, percentile_arr, axis=replication_axis
+    )
+    lower, median, upper = (np.asarray(row) for row in summary)
+    if lower.ndim != 1:
+        raise ValueError(
+            "collapsing replication_axis must leave one value for each x"
+        )
+    if len(x_arr) != len(median):
+        raise ValueError("x and the summarized values must have the same length")
+
+    line_options = dict(line_kwargs or {})
+    if color is not None:
+        line_options["color"] = color
+    if label is not None:
+        line_options["label"] = label
+    (line,) = ax.plot(x_arr, median, **line_options)
+    effective_label = line.get_label()
+
+    band_options = dict(band_kwargs or {})
+    band_options.setdefault("color", line.get_color())
+    band_options.setdefault("alpha", band_alpha)
+    band_options.setdefault("linewidth", 0)
+    band = ax.fill_between(x_arr, lower, upper, **band_options)
+
+    slope = coefficient = trend_line = None
+    if fit_trend:
+        trend_options = {
+            "color": line.get_color(),
+            "ls": ":",
+            "label": "_nolegend_",
+        }
+        trend_options.update(trend_kwargs or {})
+        slope, coefficient = plot_log_trend_line(
+            ax,
+            x_arr,
+            median,
+            n_which=trend_n_which,
+            w=trend_w,
+            **trend_options,
+        )
+        trend_line = ax.lines[-1]
+        if slope_in_label and not effective_label.startswith("_"):
+            line.set_label(
+                rf"{effective_label} (slope ${slope:.{slope_decimals}f}$)"
+            )
+
+    return {
+        "lower": lower,
+        "median": median,
+        "upper": upper,
+        "line": line,
+        "band": band,
+        "slope": slope,
+        "coefficient": coefficient,
+        "trend_line": trend_line,
+    }
 
 
 def plot_power_line(
