@@ -20,9 +20,6 @@ If yes:
 
 - Further consolidate shared SCSS
 - Expand reusable Reveal.js components
-- Establish authoritative shared slide and webpage style guides, including
-  teaching and research-presentation profiles where they genuinely differ;
-  then migrate universal guidance from consuming repositories deliberately
 - Generalize notebook visualization helpers
 - Improve the tree-marker framework
 - Reduce duplicated Quarto templates
@@ -33,7 +30,5 @@ If yes:
 
 - Which consumer-specific utilities or content should migrate into `classlib`?
 - Are additional shared slide fragments warranted?
-- Which rules in current consumer style guides are universal, and which are
-  genuine local exceptions?
 - Which repeated inline layouts in research talks warrant shared semantic
   components rather than local styling?

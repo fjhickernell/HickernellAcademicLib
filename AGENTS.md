@@ -103,62 +103,19 @@ value, and state both when both behaviors matter.
 
 ## Shared slides and webpages
 
-For diagrams and specialized visual layouts in RevealJS, follow
-[`docs/revealjs-diagram-construction.md`](docs/revealjs-diagram-construction.md),
-including its choice of HTML/CSS versus SVG, explicit grid-placement,
-asset-path, accessibility, and render-inspection requirements.
+Before substantial slide work, read the authoritative
+[`docs/slide-style.md`](docs/slide-style.md). Before substantial webpage work,
+read the authoritative
+[`docs/webpage-style.md`](docs/webpage-style.md). For diagrams and specialized
+RevealJS layouts, also follow
+[`docs/revealjs-diagram-construction.md`](docs/revealjs-diagram-construction.md).
 
-Write reusable content for its medium:
-
-- Shared slides prompt spoken explanation; they are not prose documents
-- Prefer concise, information-dense phrases; remove words that add rhythm but
-  little meaning
-- Prefer fragments and compact clauses when clear; do not force every bullet
-  into a grammatical sentence
-- Omit terminal periods and prose-list punctuation unless needed for clarity
-- Use complete sentences when precision requires them, including definitions,
-  policies, quotations, warnings, and carefully worded conclusions
-- Prefer `[key concept]{.alert}` over Markdown bold (`**key concept**`) for
-  emphasis in slides
-- Keep text links visibly identifiable as links. Do not apply `.alert` or
-  another color override to an entire text link; put that emphasis beside the
-  link or on only part of a longer linked phrase
-- Nested semantic styling may override part of a link when surrounding linked
-  text still carries the link styling. For example,
-  `[Companion \`NotebookName\` notebook](...)` may preserve inline-code styling
-  on the notebook name because the surrounding linked words identify the
-  whole phrase as a link. If the whole label would be inline code or another
-  override, add descriptive linked text or otherwise preserve a visible link
-  cue
-- Prefer `\implies` over `\Rightarrow` for mathematical implication
-- Shared webpages may use fuller prose because readers must follow them without
-  a speaker
-- Preserve mathematical and conceptual precision in both media
-- Keep slides visually clean; preserve useful figures when practical
-- Use progressive disclosure only when it improves understanding
-- Prefer shared semantic CSS classes and reusable components over inline or
-  consumer-local styling
-- For paired comparisons and other adjacent content columns that should read
-  as distinct ideas, use the **Pomona gutter** by default: two 47% content
-  columns separated by an empty 6% column. Use different proportions only
-  when the content balance requires them. Prefer this readable Quarto
-  structure over one-off CSS for an isolated slide
-- Avoid consumer-specific assumptions unless explicitly parameterized
-
-Teaching decks and research talks may need different presentation profiles;
-encode genuinely reusable differences as shared, consumer-neutral variants.
-Keep event identity, deck structure, and one-off scientific layouts local.
-
-For example, prefer `Three possible outcomes: no solution, one solution,
-infinitely many solutions`, `Row operations preserve the solution set`, and
-`Compute to explore; reason to justify` over fuller prose that supplies spoken
-transitions.
-
-Detailed shared style rules should eventually live in one authoritative
-`classlib` guide for each medium, with profiles where teaching and research
-presentations genuinely differ. Consumer repositories should reference those
-guides and document only local exceptions. Until a rule is deliberately
-migrated, its current consumer guide remains authoritative for that consumer.
+The guides define the shared teaching baseline. Encode genuinely reusable
+differences, such as a research-presentation profile, as consumer-neutral
+variants. Keep event identity, deck sequence, course terminology, local
+notation, one-off scientific layouts, and explicit exceptions in the
+consumer. Consumer guides should link to the shared source and avoid copying
+its universal rules.
 
 ## Consumer repository pattern
 

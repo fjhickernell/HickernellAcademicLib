@@ -6,6 +6,10 @@ seminars, workshops, websites, notebooks, and future academic projects.
 - [AGENTS.md](AGENTS.md) — principles for evolving shared resources
 - [Consumer adoption](docs/consumer-adoption.md) — authoritative bootstrap,
   guidance, validation, and pinned-version contract for consumer repositories
+- [Shared webpage style](docs/webpage-style.md) — authoritative reusable page
+  organization, writing, mathematics, media, and accessibility conventions
+- [Shared slide style](docs/slide-style.md) — authoritative reusable RevealJS
+  writing, structure, layout, notation, component, and validation conventions
 - [README_InstructorWorkflow.md](README_InstructorWorkflow.md) — human workflow
   for developing, publishing, and consuming the library
 - [notes/NEXT.md](notes/NEXT.md) — current shared-resource focus, candidates,
