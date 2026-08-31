@@ -122,6 +122,14 @@ Important idea goes here.
 :::
 ```
 
+When a `.key-point` contains two or more distinct statements, put each
+statement in its own paragraph so that the ideas read separately. Insert a
+standalone `&nbsp;` paragraph between them when at least one statement is long
+enough to occupy roughly two-thirds of a line or to wrap at the standard slide
+viewport. Omit the spacer when the statements are shorter, because the extra
+empty space weakens rather than clarifies the grouping. Treat this as a visual
+heuristic, not a source-text character count.
+
 Reserve `.main-message` for a stronger central takeaway.
 
 ## Mathematics and shared macros
