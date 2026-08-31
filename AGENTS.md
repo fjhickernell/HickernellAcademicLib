@@ -101,6 +101,15 @@ Do not mechanically replace **stabilizes** with **converges**. Distinguish
 convergence toward a limiting value from decreasing variability around that
 value, and state both when both behaviors matter.
 
+## Heading hierarchy
+
+Normally, a section or subsection that introduces another heading level
+should contain at least two child sections or subsections at that level. When
+there is only one child, fold it into the parent or remove the unnecessary
+heading level. A singleton child is acceptable when it is a deliberate special
+case and the additional hierarchy materially clarifies the structure; treat
+that as an exception rather than the default.
+
 ## Shared slides and webpages
 
 Before substantial slide work, read the authoritative
