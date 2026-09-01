@@ -101,6 +101,14 @@ Do not mechanically replace **stabilizes** with **converges**. Distinguish
 convergence toward a limiting value from decreasing variability around that
 value, and state both when both behaviors matter.
 
+## LaTeX display environments
+
+In notebooks and slides, prefer standalone `amsmath` display environments
+such as `\begin{align} ... \end{align}`, `equation`, `gather`, and `multline`
+(or their starred forms) over nesting `aligned` inside `$$ ... $$`. Use
+`aligned` only when the aligned block must be embedded within a larger
+mathematical environment or expression.
+
 ## Heading hierarchy
 
 Normally, a section or subsection that introduces another heading level
