@@ -12,9 +12,11 @@ For specialized diagrams, also follow
 ## Slide writing
 
 - Slides prompt spoken explanation; they are not prose documents.
-- Prefer concise, information-dense phrases and compact clauses.
-- Omit terminal periods unless precision requires complete sentences, as in
-  definitions, policies, quotations, warnings, and conclusions.
+- Write punch points: short phrases, compact clauses, and equations that the
+  audience can scan while listening. Avoid paragraph-shaped exposition and
+  sequences of complete explanatory sentences.
+- Omit terminal periods. Use complete sentences only when precision genuinely
+  requires them, as in definitions, policies, quotations, or warnings.
 - Preserve mathematical precision while removing words that add little
   information.
 - Prefer `[key concept]{.alert}` to Markdown bold for short emphasis.
@@ -135,6 +137,13 @@ Reserve `.main-message` for a stronger central takeaway.
 ## Mathematics and shared macros
 
 - Prefer displayed equations, avoid overcrowding, and preserve accuracy.
+- Use parentheses for function evaluation. Use ordinary parentheses for
+  simple arguments and matched scalable parentheses such as
+  $f\bigl(g(x)\bigr)$ for nested or visually tall arguments. Reserve curly
+  braces for notation in which they carry mathematical meaning, including
+  sets, events, sample sets, and alternatives in expressions such as
+  $\min\{1,\ldots\}$. Established probability and expectation operator
+  grouping may retain its existing convention.
 - Write **low discrepancy** without a hyphen, including in *low discrepancy
   sequence* and *randomized low discrepancy estimator*.
 - Check `hickernell-latex-macros.js` before spelling out notation. Use an
