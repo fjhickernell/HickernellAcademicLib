@@ -57,6 +57,34 @@ Consumer metadata should define deck titles and previous/next navigation. Keep
 sequence length, textbook coverage, footer labels, cumulative indexes, and
 other course architecture local.
 
+### Course Map themes
+
+Every developed teaching deck's Course Map must include a concise summary
+statement, equation, or diagram directly below **In this deck** and above
+the linked section-heading list. This deck theme gives the audience a
+memorable preview of the central idea; the list supplies the structure.
+
+- Lead with the deck's purpose or payoff. A computational theme should show
+  what the method accomplishes, and a geometric theme should show the action
+  or meaning. Combine a brief lead phrase with a few closely related
+  equations only when they capture distinct central ideas.
+- Treat an instructor's proposed theme as a starting point for useful
+  refinements in clarity, visual impact, and mathematical accuracy. Preserve
+  the teaching intent and briefly explain substantive refinements.
+- Make the theme visually prominent. Center phrase themes and use
+  `[key concept]{.alert}` selectively; a small, meaningful icon can help.
+- Begin with normal-size mathematics and use available space. Shorten or
+  wrap a long expression before reducing the font. Preserve necessary
+  conditions, vector notation, and distinctions between mathematical roles.
+- Keep column proportions consistent across decks within one course.
+  Different courses may choose different proportions; record the values in
+  their local guides.
+- Keep every section link visible and readable, with clear separation from
+  the theme and footer. Inspect the complete rendered Course Map at the
+  standard slide size and an ordinary browser size.
+- Add the theme when a placeholder deck gains substantive content; do not
+  invent a summary from undeveloped headings.
+
 ## Shared theme and semantic classes
 
 Use `hickernell-slides.scss` before adding local CSS. Add consumer-wide CSS
@@ -191,3 +219,8 @@ Render every affected representative deck, inspect it at its standard
 viewport, verify navigation and internal links, and check the browser console
 when relevant. Validate a shared change in at least one real consumer and in
 each consumer whose local conventions changed.
+
+For local review across decks, render every changed deck and refresh the
+assembled output served by the preview. A preview watching one deck may not
+rebuild the others, although links can open their already-rendered files.
+Local review works with uncommitted source and does not require a Git push.
