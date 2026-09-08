@@ -142,6 +142,12 @@ Exercise description goes here and may wrap across lines.
 Do not put a Markdown list inside `.exitem`. Use `<p>` for multiple paragraphs
 and `.exsub` for indented follow-up lines.
 
+For ordered exercise subparts, add one modifier to `.exitem`: `.lettered`
+produces `a.`, `b.`, and so on; `.numbered` produces `1.`, `2.`, and so on;
+and `.roman` produces `i.`, `ii.`, and so on. The labels come from CSS
+counters, so do not type them into the `.exsub` text. Without a modifier,
+`.exsub` retains its default en-dash marker.
+
 ## Key points
 
 Use `.key-point` rather than a generic callout for an important conclusion:
