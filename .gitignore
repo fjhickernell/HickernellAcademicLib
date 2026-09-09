@@ -29,3 +29,13 @@ classlib/notebooks/.ipynb_checkpoints/
 website/_site/
 website/*_files/
 website/.quarto/
+
+# HTML rendered beside shared Quarto sources; keep hand-written HTML includes
+/classlib/quarto/pages/git-clone-update-with-submodules.html
+/classlib/quarto/pages/interesting-articles-links.html
+/classlib/quarto/pages/policies.html
+/classlib/quarto/pages/stats-qs.html
+/classlib/quarto/snippets/fred-hickernell-bio.html
+/classlib/quarto/snippets/search-test-archives.html
+/classlib/quarto/slides/shared/**/*.html
+/website/*.html
