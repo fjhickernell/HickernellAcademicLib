@@ -134,6 +134,10 @@ notation, one-off scientific layouts, and explicit exceptions in the
 consumer. Consumer guides should link to the shared source and avoid copying
 its universal rules.
 
+When quiz, test, or final-examination dates are established before coverage is
+final, follow the shared
+[`assessment save-the-date workflow`](docs/assessment-save-the-date.md).
+
 ## Consumer repository pattern
 
 Every new course, conference talk, seminar, workshop, website, or other
