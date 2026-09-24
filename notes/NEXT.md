@@ -2,7 +2,12 @@
 
 ## Current focus
 
-No active shared-resource task.
+Verify MathJax typesetting in Safari for MATH 332 after changing the shared
+Reveal loader to let slides display while the remote math script loads. The
+full slide render succeeded and Deck 00 displayed, but the footer exercise
+symbol still showed raw TeX in the immediate screenshot. Check whether it
+typesets after loading and diagnose a blocked or delayed MathJax request if
+needed. Confirm Decks 04 and 05 in the browser.
 
 When working in a consuming repository, always ask:
 
