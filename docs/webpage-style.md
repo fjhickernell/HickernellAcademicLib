@@ -63,6 +63,22 @@ recreate the shared treatment with page-local CSS.
 ```
 
 - Restructure overly wide tables rather than forcing difficult scrolling.
+- In a course schedule's quiz or test row, put `Covers` on its own line when
+  coverage is known. Put each coverage link and any cutoff or exclusion on a
+  separate following line, with the same visible indentation (for example,
+  four `&nbsp;` spaces after each `<br>`). Keep `Coverage TBD` when coverage
+  has not been decided.
+
+## Browser layout verification
+
+After changing webpage content or CSS, render the affected page and inspect it
+in a browser at representative desktop and narrow widths. Review the entire
+affected page, including repeated sections or tables beyond the edited row.
+Check column balance in both dense and sparse tables, line wrapping, link and
+text clipping, horizontal overflow, and alignment. Repeat the visual check
+after each layout revision. A successful render confirms that the page builds;
+it does not confirm that the layout fits. Complete this check before asking
+the instructor or other reader to review the result.
 
 ## Code and notebooks
 
