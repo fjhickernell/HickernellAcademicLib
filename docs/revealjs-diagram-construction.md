@@ -35,6 +35,11 @@ maintainable, and easy to validate in a real consumer deck.
 - Give each connector one authoritative drawing mechanism. Do not overlay a
   CSS border and an SVG path for the same segment; duplicated geometry can
   render as a double line after RevealJS scaling.
+- Size arrowheads for the projected slide, not just the SVG coordinate system.
+  Vector arrows need clearly visible, filled heads that remain distinct from
+  the shaft at an ordinary browser viewport; inspect them after RevealJS
+  scales the complete slide. End each shaft at the base of its arrowhead, and
+  check that the shaft or a rounded cap does not protrude through the tip.
 - For a multicolor rounded turn, prefer one continuous path with a gradient or
   another explicit transition over differently colored CSS borders meeting
   inside a radius.
