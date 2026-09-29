@@ -120,12 +120,19 @@ that as an exception rather than the default.
 
 ## Shared slides and webpages
 
-Before substantial slide work, read the authoritative
+Before any slide edit, read the authoritative
 [`docs/slide-style.md`](docs/slide-style.md). Before substantial webpage work,
 read the authoritative
 [`docs/webpage-style.md`](docs/webpage-style.md). For diagrams and specialized
 RevealJS layouts, also follow
 [`docs/revealjs-diagram-construction.md`](docs/revealjs-diagram-construction.md).
+
+For every slide edit, enforce the guide's source-text rules: no bold slide
+prose and no unnecessary terminal periods in visible content or exercise
+prompts. Use `.alert` for short emphasized terms and `.key-point` or
+`.main-message` for takeaways. Keep mathematical vector glyphs bold through
+the consumer's vector notation. Inspect the changed deck for both issues
+before finishing.
 
 The guides define the shared teaching baseline. Encode genuinely reusable
 differences, such as a research-presentation profile, as consumer-neutral

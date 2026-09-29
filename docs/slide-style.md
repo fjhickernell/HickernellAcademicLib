@@ -15,11 +15,22 @@ For specialized diagrams, also follow
 - Write punch points: short phrases, compact clauses, and equations that the
   audience can scan while listening. Avoid paragraph-shaped exposition and
   sequences of complete explanatory sentences.
-- Omit terminal periods. Use complete sentences only when precision genuinely
+- Omit terminal periods from visible slide prose, bullets, and exercise prompts,
+  including punctuation before a closing HTML tag. A complete sentence does
+  not need a final period on a slide. Keep periods required by mathematics,
+  abbreviations, quotations, or citations; presenter notes may use ordinary
+  prose punctuation. Use complete sentences only when precision genuinely
   requires them, as in definitions, policies, quotations, or warnings.
 - Preserve mathematical precision while removing words that add little
   information.
-- Prefer `[key concept]{.alert}` to Markdown bold for short emphasis.
+- Never use boldface for emphasis in slide prose. Highlight a short term or
+  phrase with `[key concept]{.alert}`; use `.key-point` or `.main-message` for
+  a complete takeaway. Bold mathematical vector glyphs remain appropriate;
+  write them with the consumer's vector notation or macro.
+- Before finishing a deck edit, inspect the changed slide source for Markdown
+  `**...**` or `__...__`, HTML `<b>` or `<strong>`, and LaTeX `\textbf{...}`.
+  Replace prose-emphasis uses with the semantic highlight style; retain only
+  mathematical bold notation or an explicitly documented exception.
 - Keep links visibly identifiable; do not color an entire link as an alert.
 - Prefer `\implies` to `\Rightarrow` for mathematical implication.
 - Use progressive disclosure only when it improves understanding.
@@ -220,6 +231,16 @@ and retain `target="_blank" rel="noopener"` for external sources.
   marker presets, and one-off scientific layouts in the consumer.
 
 ## Validation
+
+Before finishing every deck edit, make a separate source-text pass for
+unnecessary terminal periods in visible slide content and exercise prompts,
+including text inside HTML spans. Exclude presenter notes from this check.
+Also check for bold prose as required above. Do this after content edits so
+new exercises and examples receive the same review as existing slides.
+Use `rg -n '\.(</[^>]+>)?[[:space:]]*$' path/to/deck.qmd` to collect likely
+terminal periods, then inspect matches outside presenter notes; the scan is a
+review aid, not an instruction to remove punctuation with mathematical or
+source meaning.
 
 Render every affected representative deck, inspect it at its standard
 viewport, verify navigation and internal links, and check the browser console
