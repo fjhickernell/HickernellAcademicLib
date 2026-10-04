@@ -2,12 +2,16 @@
 
 ## Current focus
 
-The MATH 332 consumer has validated the named-deck reference convention in
-`docs/slide-style.md`, including its eleven-deck course maps and split
-Chapter 4 material. Mathematical typesetting and footer symbols now pass
-visible review in that consumer; the earlier delayed-loader check is complete.
-No new shared implementation task is selected. Preserve the consumer-neutral
-guidance and consider the candidate improvements below when requested.
+The responsive footer fix is complete and validated in the MATH 332 consumer.
+Shared footer text scales with viewport width and reserves menu-button space.
+All eleven consumer decks render cleanly; complete footers were checked at
+1280 by 720, with additional 1600 by 1000 and 1024 by 768 checks. The SCSS and
+slide-style guidance match the validated consumer prototype.
+
+The named-deck reference convention and delayed-loader validation remain
+complete. No additional shared implementation task is selected. Preserve
+consumer-neutral guidance and use exact published commits for intentional
+consumer updates; do not advance unrelated consumers automatically.
 
 When working in a consuming repository, always ask:
 

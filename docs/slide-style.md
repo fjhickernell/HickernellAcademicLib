@@ -132,6 +132,10 @@ Shared features include:
 
 Use these classes according to meaning, not incidental appearance.
 
+The shared footer scales its text with the browser width to keep its single
+line clear of the slide counter. After changing deck or course labels, inspect
+the complete footer at the standard slide size and an ordinary browser width.
+
 ## Columns and layout
 
 - Prefer shared semantic components to inline or consumer-local styling.
