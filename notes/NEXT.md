@@ -2,12 +2,12 @@
 
 ## Current focus
 
-Verify MathJax typesetting in Safari for MATH 332 after changing the shared
-Reveal loader to let slides display while the remote math script loads. The
-full slide render succeeded and Deck 00 displayed, but the footer exercise
-symbol still showed raw TeX in the immediate screenshot. Check whether it
-typesets after loading and diagnose a blocked or delayed MathJax request if
-needed. Confirm Decks 04 and 05 in the browser.
+The MATH 332 consumer has validated the named-deck reference convention in
+`docs/slide-style.md`, including its eleven-deck course maps and split
+Chapter 4 material. Mathematical typesetting and footer symbols now pass
+visible review in that consumer; the earlier delayed-loader check is complete.
+No new shared implementation task is selected. Preserve the consumer-neutral
+guidance and consider the candidate improvements below when requested.
 
 When working in a consuming repository, always ask:
 

@@ -68,6 +68,21 @@ Consumer metadata should define deck titles and previous/next navigation. Keep
 sequence length, textbook coverage, footer labels, cumulative indexes, and
 other course architecture local.
 
+### Deck references
+
+In all teaching decks, refer to other decks by their metadata-defined short
+titles and link to the destination deck or relevant slide. Use the full title
+when the short title would be ambiguous. Apply this convention to visible
+slide text, Course Maps, navigation, and presenter notes, and use named deck
+references in associated student-facing pages and notebooks.
+
+For example, write `[{{< meta decks.d02.short_title >}}]({{< meta decks.d02.file >}}#relevant-slide)`
+rather than a link labeled `Deck 02`. A topic-specific label may combine the
+deck name and topic, such as `Generating Samples: inverse transforms`.
+
+Keep numeric IDs and ordered filenames for source organization. Use a deck
+number in prose only when the numbering or sequence is itself being discussed.
+
 ### Course Map themes
 
 Every developed teaching deck's Course Map must include a concise summary
