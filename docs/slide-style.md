@@ -270,3 +270,12 @@ For local review across decks, render every changed deck and refresh the
 assembled output served by the preview. A preview watching one deck may not
 rebuild the others, although links can open their already-rendered files.
 Local review works with uncommitted source and does not require a Git push.
+
+## Math rendering runtime
+
+Use the bundled MathJax runtime selected by `hickernell-slides.yml`. Keep
+the full `classlib/quarto/assets/mathjax/` directory available at the shared
+asset URL in both independent slide previews and the assembled website.
+Avoid consumer overrides pointing to a remote CDN: a stalled download can
+leave all equations as raw TeX even while slide navigation remains usable.
+The runtime version, source, and license are recorded beside the bundle.

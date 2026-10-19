@@ -2,6 +2,14 @@
 
 ## Current focus
 
+The local MathJax runtime fix is complete and validated in MATH 332.
+Safari stalled loading the external CDN script, leaving raw TeX after reloads.
+The shared configuration and loader fallback now serve bundled MathJax 3.2.2
+with license and provenance. Twelve consumer decks render; Safari reload and
+slide/section navigation pass, confirmed by the instructor. Publish this
+canonical change before advancing the 332 consumer pin. Other consumers
+retain their pins until deliberately selected for adoption.
+
 The responsive footer fix is complete and validated in the MATH 332 consumer.
 Shared footer text scales with viewport width and reserves menu-button space.
 All eleven consumer decks render cleanly; complete footers were checked at
