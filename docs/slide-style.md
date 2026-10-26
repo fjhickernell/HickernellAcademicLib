@@ -68,6 +68,13 @@ Consumer metadata should define deck titles and previous/next navigation. Keep
 sequence length, textbook coverage, footer labels, cumulative indexes, and
 other course architecture local.
 
+The shared navigation helper starts a new horizontal section at its overview
+when using arrows, while explicit slide links and browser address/history
+jumps retain the requested child slide. Named anchors can identify a heading
+inside a slide. Verify such links in a browser across section boundaries;
+checking that an anchor exists does not verify its navigation behavior.
+Run `node --test tests/test_reveal_nav_reset.cjs` when changing this helper.
+
 ### Deck references
 
 In all teaching decks, refer to other decks by their metadata-defined short

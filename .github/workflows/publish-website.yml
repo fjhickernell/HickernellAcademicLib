@@ -22,6 +22,9 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      - name: Check Reveal navigation
+        run: node --test tests/test_reveal_nav_reset.cjs
+
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 

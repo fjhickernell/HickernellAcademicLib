@@ -2,6 +2,13 @@
 
 ## Current focus
 
+The slide navigation correction is validated in MATH 332: cross-section links
+to continuation headings, direct hash addresses, and initial deep links retain
+their requested slide; horizontal arrows still start at the section overview.
+Four Node regression tests cover these behaviors and run before website
+publication. MATH 332 is the selected consumer for this exact library update;
+other consumers retain their existing pins.
+
 The local MathJax runtime fix is complete and validated in MATH 332.
 Safari stalled loading the external CDN script, leaving raw TeX after reloads.
 The shared configuration and loader fallback now serve bundled MathJax 3.2.2
