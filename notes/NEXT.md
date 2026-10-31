@@ -2,6 +2,11 @@
 
 ## Current focus
 
+The all-course grading-tracker progress default is documented in `AGENTS.md`.
+MATH 565 is the selected consumer for this guidance update; other consumers
+retain their intentional pins. The global instructions route future tracker
+preparation to this default. No further implementation is needed.
+
 The slide navigation correction is validated in MATH 332: cross-section links
 to continuation headings, direct hash addresses, and initial deep links retain
 their requested slide; horizontal arrows still start at the section overview.

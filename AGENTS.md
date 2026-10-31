@@ -76,6 +76,38 @@ as a submodule. Do not substitute a generic `python3`, `python3.13`, or other
 kernel merely because that submodule is absent. Use a different environment
 only when the project explicitly requires one.
 
+## Grading tracker progress
+
+Every future assignment grading tracker, in any course, must include a
+formula-driven summary row at the top, directly above each exercise-score
+column and the total column. Show `x graded, y left` while entries remain,
+then `DONE` when every grading row has a numeric score in that column.
+
+- Put the progress row above the column headers; in a new tracker, use row 1
+  for progress, row 2 for headers, and row 3 onward for grading. Freeze both
+  top rows and preserve the tracker’s identifying-column freeze.
+- Count only the actual grading rows. Each individual or group submission is
+  one row; retain non-submission rows and exclude Test Student. Exclude
+  headers, summary/footer rows, and unused rows. Adapt ranges when the roster
+  or grouping changes rather than hardcoding a particular class size.
+- Count numeric scores, including zero. Blanks, text, and formulas returning
+  `""` remain incomplete. Keep derived totals blank until every required
+  component score is numeric, so unfinished rows do not appear graded as zero.
+- Preserve an instructor’s existing summary row instead of adding a duplicate.
+  Progress records score entry, not Canvas upload, posting, or release.
+
+For a score column whose grading rows are G3:G21, put this in G1 and adapt
+the range for each exercise and total column:
+
+```excel
+=IF(COUNT(G3:G21)=ROWS(G3:G21),"DONE",COUNT(G3:G21)&" graded, "&(ROWS(G3:G21)-COUNT(G3:G21))&" left")
+```
+
+For a total with required component scores in G3:H3, use a completeness guard
+such as `=IF(COUNT(G3:H3)=COLUMNS(G3:H3),SUM(G3:H3),"")`. Apply any
+instructor-defined scoring adjustments only in the completed-score branch,
+leaving incomplete totals blank.
+
 ## Mathematical use of stability terminology
 
 In notebooks, slides, webpages, assignments, and other teaching materials,
