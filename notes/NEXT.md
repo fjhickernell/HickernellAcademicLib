@@ -2,6 +2,11 @@
 
 ## Current focus
 
+The simple-fraction preference is documented in `AGENTS.md`: use slash
+notation in running text and stacked fractions in displayed equations.
+MATH 332 is the selected consumer for this documentation-only update; other
+consumers retain their intentional pins. No runtime behavior changes.
+
 The all-course grading-tracker progress default is documented in `AGENTS.md`.
 MATH 565 is the selected consumer for this guidance update; other consumers
 retain their intentional pins. The global instructions route future tracker

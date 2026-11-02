@@ -133,6 +133,14 @@ Do not mechanically replace **stabilizes** with **converges**. Distinguish
 convergence toward a limiting value from decreasing variability around that
 value, and state both when both behaviors matter.
 
+## Fractions in running text
+
+Use slash notation for simple fractions in running text, such as `$1/3$`
+and `$t=1/3$`, rather than stacked fractions such as `$\frac{1}{3}$`.
+This preference applies across teaching materials, including assessment
+solutions. Stacked fractions remain appropriate in displayed equations.
+Fred requested this on November 2, 2026.
+
 ## LaTeX display environments
 
 In notebooks and slides, prefer standalone `amsmath` display environments
