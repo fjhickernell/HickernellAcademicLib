@@ -2,6 +2,13 @@
 
 ## Current focus
 
+Every student-action course deadline now belongs on the course Schedule as
+well as its detailed page, with linked instructions and coordinated date
+changes. The rule is documented in `AGENTS.md` and exercised by MATH 565's
+presenter and observer sign-up entries. MATH 332 and MATH 565 are the selected
+consumers for this guidance update; other consumers retain their intentional
+pins. No runtime behavior changes.
+
 The simple-fraction preference is documented in `AGENTS.md`: use slash
 notation in running text and stacked fractions in displayed equations.
 MATH 332 is the selected consumer for this documentation-only update; other

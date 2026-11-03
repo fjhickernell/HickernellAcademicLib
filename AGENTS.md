@@ -76,6 +76,18 @@ as a submodule. Do not substitute a generic `python3`, `python3.13`, or other
 kernel merely because that submodule is absent. Use a different environment
 only when the project explicitly requires one.
 
+## Course deadlines on the Schedule
+
+Record every course deadline that students need to act on in the course
+Schedule, even when it also appears on a Project, Assignment, assessment,
+Canvas, or other detailed page. This includes project-topic submissions,
+presentation time-slot sign-ups, and observer sign-ups.
+
+Keep the detailed instructions on their authoritative page and link to them
+from the Schedule entry. When a deadline changes, update the Schedule and
+the other places that state it together. Preserve date-only deadlines when
+no time has been specified. Fred requested this on November 3, 2026.
+
 ## Grading tracker progress
 
 Every future assignment grading tracker, in any course, must include a
