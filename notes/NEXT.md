@@ -2,6 +2,13 @@
 
 ## Current focus
 
+The automatic table-index default is documented in `AGENTS.md`: omit display
+row numbers unless they carry a clearly labeled meaning or support a specific
+explanation. Preserve meaningful run, seed, iteration and similar data columns.
+The MATH 565 SGD notebook validates this convention in its saved tables.
+MATH 565 is the selected consumer for this documentation-only update; other
+consumers retain their intentional pins.
+
 Every student-action course deadline now belongs on the course Schedule as
 well as its detailed page, with linked instructions and coordinated date
 changes. The rule is documented in `AGENTS.md` and exercised by MATH 565's

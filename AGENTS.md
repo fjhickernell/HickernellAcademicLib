@@ -76,6 +76,18 @@ as a submodule. Do not substitute a generic `python3`, `python3.13`, or other
 kernel merely because that submodule is absent. Use a different environment
 only when the project explicitly requires one.
 
+## Table row numbers
+
+Omit automatic display row numbers and dataframe indices from tables by
+default. Show them only when the index carries meaning or is needed for a
+specific explanation or cross-reference; label that meaning clearly.
+Apply this convention to notebooks, slides, webpages, and written explanations.
+
+Preserve meaningful data columns such as iteration, run, seed, observation ID,
+or time. Hiding a display index must not remove those values or change numeric
+precision. In pandas, use an index-free renderer such as `to_html(index=False)`
+or hide the Styler index explicitly. Fred requested this on November 11, 2026.
+
 ## Course deadlines on the Schedule
 
 Record every course deadline that students need to act on in the course
