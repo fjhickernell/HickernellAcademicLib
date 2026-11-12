@@ -26,12 +26,18 @@ MATH 565 is the selected consumer for this guidance update; other consumers
 retain their intentional pins. The global instructions route future tracker
 preparation to this default. No further implementation is needed.
 
-The slide navigation correction is validated in MATH 332: cross-section links
-to continuation headings, direct hash addresses, and initial deep links retain
-their requested slide; horizontal arrows still start at the section overview.
-Four Node regression tests cover these behaviors and run before website
-publication. MATH 332 is the selected consumer for this exact library update;
-other consumers retain their existing pins.
+The queued-hash slide-navigation fix is validated in MATH 332 and transferred
+to the canonical checkout. Resolve current URL targets rather than replay stale
+hash events, and protect a direct child target when Reveal handles the URL
+before the helper. All five Node regressions pass. In the real-browser queued
+navigation fixture, the original code loops until the 43-event safety cutoff;
+the fix settles on the requested child after two events. Ordinary arrows,
+section links and browser back/forward retain their intended behavior.
+
+The reusable implementation and regression are complete. MATH 332 is the
+selected consumer for this exact update; publish the canonical library before
+advancing its pin. Course issue 3 records the deployment and reporter closeout.
+Other consumers retain their intentional pins.
 
 The local MathJax runtime fix is complete and validated in MATH 332.
 Safari stalled loading the external CDN script, leaving raw TeX after reloads.
