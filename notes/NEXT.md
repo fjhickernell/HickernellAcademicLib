@@ -2,6 +2,19 @@
 
 ## Current focus
 
+The academic website now links to the November 16 StrategicSamplingColloquium talk on Talks and Featured Resources. Its title-slide QR points to this academic homepage. Later talk deployments update the linked destination without copying slides into the library.
+
+The reusable collaborator workflow is documented in `docs/collaborators.md`
+and routed from `AGENTS.md`. Master names/IDs stay in the names-only catalog;
+master photographs stay in iCloud Drive’s `Collaborator Headshots` archive.
+`tools/collaborator_assets.py` and its shell launcher refresh explicit
+consumer selections and check publishing copies without iCloud access.
+Samuel Vangu is added to the master names catalog. Nine focused tests pass;
+StrategicSamplingColloquium is the selected integration consumer. The shared
+changes are validated in its consuming checkout. This Checkpoint publishes
+the canonical library before advancing that consumer pin; other consumers
+retain their intentional pins.
+
 The automatic table-index default is documented in `AGENTS.md`: omit display
 row numbers unless they carry a clearly labeled meaning or support a specific
 explanation. Preserve meaningful run, seed, iteration and similar data columns.

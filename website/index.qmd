@@ -9,11 +9,12 @@ This site collects my talks, publications, course materials, software projects, 
 
 ## Featured Resources
 
+- [Sampling More Strategically But Just as Flexibly as IID — November 16 seminar](https://fjhickernell.github.io/StrategicSamplingColloquium/)
 - [MCQMC 2026 Plenary Slides](https://fjhickernell.github.io/MCQMC26/)
 - [QMCPy and QMCSoftware](https://qmcsoftware.github.io/QMCSoftware/)
 
 ## Research Interests
 
-(Quasi-)Monte Carlo Methods, Information-Based Complexity, High-Dimensional Integraton and Approximation, Uncertainty Quantification, Scientific Software
+(Quasi-)Monte Carlo Methods, Information-Based Complexity, High-Dimensional Integration and Approximation, Uncertainty Quantification, Scientific Software
 
 

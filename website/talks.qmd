@@ -4,7 +4,8 @@ title: "Talks"
 
 | Recent |
 |------
+| [Sampling More Strategically But Just as Flexibly as IID — Illinois Tech seminar, November 16, 2026](https://fjhickernell.github.io/StrategicSamplingColloquium/) |
 | [MCQMC 2026 Plenary and Special Session Talks](https://fjhickernell.github.io/MCQMC26/) |
 | [SIAM UQ 2026](https://fjhickernell.github.io/SIAMUQ26/) |
 
-Some earliier talks are [Speaker Deck](https://speakerdeck.com/fjhickernell)
+Some earlier talks are on [Speaker Deck](https://speakerdeck.com/fjhickernell)

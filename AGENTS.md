@@ -209,6 +209,17 @@ When quiz, test, or final-examination dates are established before coverage is
 final, follow the shared
 [`assessment save-the-date workflow`](docs/assessment-save-the-date.md).
 
+## Collaborators and headshots
+
+For future talks and intentional collaborator-gallery updates, follow
+[`docs/collaborators.md`](docs/collaborators.md). Use the shared names/ID
+catalog, the iCloud `Collaborator Headshots` master-photo archive, and an
+explicit ordered selection in each consumer. Generate selected publishing
+copies and captions with `tools/collaborator_assets.py`; check them without
+iCloud access before rendering or publishing. New catalog entries never
+change existing talk selections automatically. Fred selected crop-only
+preparation as the default on November 15, 2026.
+
 ## Consumer repository pattern
 
 Every new course, conference talk, seminar, workshop, website, or other
