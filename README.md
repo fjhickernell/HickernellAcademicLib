@@ -19,6 +19,8 @@ seminars, workshops, websites, notebooks, and future academic projects.
 - [Notebook replication-band plots](docs/notebook-replication-bands.md) —
   median and percentile bands for precomputed replications, with optional
   fitted log--log trends
+- [Collaborator reference catalog](classlib/quarto/metadata/hickernell-collaborators.yml)
+  — names and stable IDs for explicit per-talk selection; no automatic deck updates
 - [Tree component documentation](classlib/quarto/components/trees/README.md) —
   representative component API and usage guide
 
